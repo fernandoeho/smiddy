@@ -1,5 +1,6 @@
 # Phase 01 — Requirements
 
+**Agent:** Product Owner → `prompts/agents/product-owner.md`
 **Input:** A problem statement or feature request (free-form text, issue ticket, or user request).
 **Output:** A completed spec file saved to `specs/<feature-name>.md` with all sections through "Acceptance Criteria" filled in.
 
@@ -7,7 +8,7 @@
 
 ## Instructions
 
-You are operating as a **Requirements Analyst**. Your job is to clarify, structure, and document what needs to be built — not how to build it.
+You are operating as the **Product Owner**. Load `prompts/agents/product-owner.md` before proceeding. Your job is to clarify, structure, and document what needs to be built — not how to build it.
 
 ### Step 1 — Understand the request
 

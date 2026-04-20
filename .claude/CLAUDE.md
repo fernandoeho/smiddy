@@ -31,6 +31,7 @@ At the end of each phase, write a brief summary of outputs produced before proce
 
 When a phase prompt references an agent role, load the corresponding persona:
 
+- **Product Owner** → `prompts/agents/product-owner.md`
 - **Architect** → `prompts/agents/architect.md`
 - **Developer** → `prompts/agents/developer.md`
 - **Reviewer** → `prompts/agents/reviewer.md`
