@@ -41,7 +41,7 @@ Determine the version number using semantic versioning:
 - **MINOR** — new features, backwards-compatible
 - **PATCH** — bug fixes only, backwards-compatible
 
-Check `context/decisions.md` for any versioning policy decisions that override this default.
+Check `.smiddy/context/decisions.md` for any versioning policy decisions that override this default.
 
 Create a release branch:
 ```
@@ -91,9 +91,9 @@ Tag message should include the one-paragraph release summary.
 
 ## Step 5 — Deploy
 
-Follow the deployment procedure for this project (documented in `specs/architecture.md` under Infrastructure, or in a separate runbook).
+Follow the deployment procedure for this project (documented in `.smiddy/specs/architecture.md` under Infrastructure, or in a separate runbook).
 
-Record the deployment in `context/decisions.md` if it involves a significant infrastructure change.
+Record the deployment in `.smiddy/context/decisions.md` if it involves a significant infrastructure change.
 
 ---
 

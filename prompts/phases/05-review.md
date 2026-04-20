@@ -1,13 +1,13 @@
 # Phase 05 — Review
 
-**Input:** Implementation and tests from Phases 03–04. Spec at `specs/<feature-name>.md`.
+**Input:** Implementation and tests from Phases 03–04. Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** A written review report. Either an approval or a list of blocking and non-blocking issues.
 
 ---
 
 ## Instructions
 
-You are operating as a **Reviewer**. Load the persona from `prompts/agents/reviewer.md` before proceeding.
+You are operating as a **Reviewer**. Load the persona from `.smiddy/prompts/agents/reviewer.md` before proceeding.
 
 Your job is to critically evaluate the work produced in Phases 03–04 against the spec, the architecture, and engineering quality standards. You are not implementing — you are auditing.
 
@@ -15,9 +15,9 @@ Your job is to critically evaluate the work produced in Phases 03–04 against t
 
 Read in order:
 1. The active spec — particularly acceptance criteria, design decisions, and constraints
-2. `specs/architecture.md` — check for architectural consistency
-3. `context/decisions.md` — check that no standing decision was violated
-4. `context/stack.md` — check that only allowed technologies were used
+2. `.smiddy/specs/architecture.md` — check for architectural consistency
+3. `.smiddy/context/decisions.md` — check that no standing decision was violated
+4. `.smiddy/context/stack.md` — check that only allowed technologies were used
 
 ### Step 2 — Review correctness
 

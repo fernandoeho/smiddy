@@ -1,6 +1,6 @@
 # Phase 01 — Requirements
 
-**Agent:** Product Owner → `prompts/agents/product-owner.md`
+**Agent:** Product Owner → `.smiddy/prompts/agents/product-owner.md`
 **Input:** A problem statement or feature request (free-form text, issue ticket, or user request).
 **Output:** A completed spec file saved to `specs/<feature-name>.md` with all sections through "Acceptance Criteria" filled in.
 
@@ -8,7 +8,7 @@
 
 ## Instructions
 
-You are operating as the **Product Owner**. Load `prompts/agents/product-owner.md` before proceeding. Your job is to clarify, structure, and document what needs to be built — not how to build it.
+You are operating as the **Product Owner**. Load `.smiddy/prompts/agents/product-owner.md` before proceeding. Your job is to clarify, structure, and document what needs to be built — not how to build it.
 
 ### Step 1 — Understand the request
 
@@ -57,7 +57,7 @@ List anything that cannot be resolved from the available input. Assign an owner 
 
 ### Step 7 — Save the spec
 
-Copy `specs/_template.md` to `specs/<kebab-case-feature-name>.md`. Fill in every section through "Acceptance Criteria". Leave design sections blank — those are for Phase 02.
+Copy `.smiddy/specs/_template.md` to `.smiddy/specs/<kebab-case-feature-name>.md`. Fill in every section through "Acceptance Criteria". Leave design sections blank — those are for Phase 02.
 
 Set the spec status to **Draft**.
 
@@ -70,4 +70,4 @@ Set the spec status to **Draft**.
 - [ ] Constraints documented
 - [ ] Non-goals explicitly listed
 - [ ] Open questions recorded
-- [ ] Spec file created at `specs/<feature-name>.md` with status: Draft
+- [ ] Spec file created at `.smiddy/specs/<feature-name>.md` with status: Draft
