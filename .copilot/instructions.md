@@ -30,6 +30,7 @@ When the developer opens or references a phase prompt from `prompts/phases/`, co
 
 When asked to adopt a specific role, load the relevant persona file before responding:
 
+- **Product Owner** → `prompts/agents/product-owner.md`
 - **Architect** → `prompts/agents/architect.md`
 - **Developer** → `prompts/agents/developer.md`
 - **Reviewer** → `prompts/agents/reviewer.md`

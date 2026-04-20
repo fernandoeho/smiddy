@@ -37,7 +37,9 @@ Run phases in order. Do not advance until the current phase's Definition of Done
 
 ## Checklist
 
-### Phase 01 — Requirements
+### Phase 01 — Requirements _(Agent: Product Owner)_
+- [ ] Raw requirement provided to the Product Owner agent
+- [ ] Clarifying questions asked and answered
 - [ ] Problem statement understood
 - [ ] User stories written
 - [ ] Acceptance criteria defined and testable
