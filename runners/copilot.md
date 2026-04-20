@@ -9,7 +9,22 @@ This guide explains how to invoke the Smiddy pipeline using GitHub Copilot in VS
 - GitHub Copilot extension installed and signed in
 - Copilot Chat enabled (VS Code sidebar or inline chat)
 - `.copilot/instructions.md` present in the project root (it is — Smiddy created it)
-- `.smiddy/context/stack.md` filled in with your project's details
+- `.smiddy/context/stack.md` filled in with your project's details (see below if starting from an existing project)
+
+---
+
+## Filling in the Stack (Existing Projects)
+
+If you installed Smiddy into a project that already has code, run the stack discovery prompt once before starting any pipeline phase. Open Copilot Chat and send:
+
+```
+@workspace
+#file:.smiddy/prompts/setup/stack-discovery.md
+
+Follow the instructions in this file against the current project.
+```
+
+Review the output, apply it to `.smiddy/context/stack.md` using the VS Code diff editor, and fill in anything Copilot could not determine automatically.
 
 ---
 

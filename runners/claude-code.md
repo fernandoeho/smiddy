@@ -7,8 +7,20 @@ This guide explains how to invoke the Smiddy pipeline using Claude Code. It cove
 ## Prerequisites
 
 - Claude Code installed and authenticated (`claude --version`)
-- Project cloned and `.smiddy/context/stack.md` filled in
+- `.smiddy/context/stack.md` filled in (run the stack discovery prompt below if starting from an existing project)
 - A spec file created under `.smiddy/specs/` (copy from `.smiddy/specs/_template.md`)
+
+---
+
+## Filling in the Stack (Existing Projects)
+
+If you installed Smiddy into a project that already has code, run the stack discovery prompt once before starting any pipeline phase:
+
+```
+Read .smiddy/prompts/setup/stack-discovery.md and follow its instructions against this project.
+```
+
+Claude Code will scan the project files and write `.smiddy/context/stack.md` for you. Review the output and fill in anything it could not determine automatically.
 
 ---
 

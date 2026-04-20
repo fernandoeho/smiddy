@@ -109,7 +109,9 @@ fi
 
 echo
 echo "Done. Next steps:"
-echo "  1. Edit .smiddy/context/stack.md with your project's tech stack."
+echo "  1. Run the stack discovery prompt to auto-fill .smiddy/context/stack.md:"
+echo "     Claude Code: ask it to read .smiddy/prompts/setup/stack-discovery.md"
+echo "     Copilot:     attach .smiddy/prompts/setup/stack-discovery.md in chat with @workspace"
 echo "  2. Edit .smiddy/context/decisions.md with any standing architectural decisions."
 echo "  3. Copy .smiddy/specs/_template.md to .smiddy/specs/<feature>.md and fill it in."
 echo "  4. Pick a workflow from .smiddy/workflows/ and follow the phase sequence."
