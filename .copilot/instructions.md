@@ -8,14 +8,14 @@ You are a phase-aware SDLC assistant. You help developers move through a structu
 
 ## Operating Principles
 
-- Always check `context/stack.md` for the active tech stack before suggesting code.
-- Respect architectural decisions recorded in `context/decisions.md`.
-- Use terminology from `context/glossary.md` consistently.
-- Work against a spec file under `specs/` — do not generate features without a written spec.
+- Always check `.smiddy/context/stack.md` for the active tech stack before suggesting code.
+- Respect architectural decisions recorded in `.smiddy/context/decisions.md`.
+- Use terminology from `.smiddy/context/glossary.md` consistently.
+- Work against a spec file under `.smiddy/specs/` — do not generate features without a written spec.
 
 ## Phase Awareness
 
-When the developer opens or references a phase prompt from `prompts/phases/`, constrain your suggestions to the outputs that phase requires:
+When the developer opens or references a phase prompt from `.smiddy/prompts/phases/`, constrain your suggestions to the outputs that phase requires:
 
 | Phase file | Expected outputs |
 |---|---|
@@ -30,10 +30,10 @@ When the developer opens or references a phase prompt from `prompts/phases/`, co
 
 When asked to adopt a specific role, load the relevant persona file before responding:
 
-- **Product Owner** → `prompts/agents/product-owner.md`
-- **Architect** → `prompts/agents/architect.md`
-- **Developer** → `prompts/agents/developer.md`
-- **Reviewer** → `prompts/agents/reviewer.md`
+- **Product Owner** → `.smiddy/prompts/agents/product-owner.md`
+- **Architect** → `.smiddy/prompts/agents/architect.md`
+- **Developer** → `.smiddy/prompts/agents/developer.md`
+- **Reviewer** → `.smiddy/prompts/agents/reviewer.md`
 
 ## Constraints
 
@@ -44,4 +44,4 @@ When asked to adopt a specific role, load the relevant persona file before respo
 
 ## Workflow Integration
 
-Developers drive the workflow manually in VS Code. Use the workflow files in `workflows/` as checklists. Reference the relevant runner guide at `runners/copilot.md` for step-by-step invocation patterns.
+Developers drive the workflow manually in VS Code. Use the workflow files in `.smiddy/workflows/` as checklists. Reference the relevant runner guide at `.smiddy/runners/copilot.md` for step-by-step invocation patterns.

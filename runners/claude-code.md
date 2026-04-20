@@ -7,8 +7,8 @@ This guide explains how to invoke the Smiddy pipeline using Claude Code. It cove
 ## Prerequisites
 
 - Claude Code installed and authenticated (`claude --version`)
-- Project cloned and `context/stack.md` filled in
-- A spec file created under `specs/` (copy from `specs/_template.md`)
+- Project cloned and `.smiddy/context/stack.md` filled in
+- A spec file created under `.smiddy/specs/` (copy from `.smiddy/specs/_template.md`)
 
 ---
 
@@ -29,9 +29,9 @@ At the start of every session, Claude Code will read `.claude/CLAUDE.md` automat
 For each phase, paste the phase prompt into the Claude Code session, preceded by the active spec path. Example for Phase 01:
 
 ```
-Active spec: specs/my-feature.md
+Active spec: .smiddy/specs/my-feature.md
 
-[paste contents of prompts/phases/01-requirements.md]
+[paste contents of .smiddy/prompts/phases/01-requirements.md]
 ```
 
 Claude Code will execute the phase, produce outputs, and stop at the Definition of Done checklist for your confirmation before advancing.
@@ -43,9 +43,9 @@ Claude Code will execute the phase, produce outputs, and stop at the Definition 
 To run multiple phases autonomously without manual advancement, provide the full workflow context upfront:
 
 ```
-Workflow: workflows/new-feature.md
-Spec: specs/my-feature.md
-Context: context/stack.md, context/decisions.md, context/glossary.md
+Workflow: .smiddy/workflows/new-feature.md
+Spec: .smiddy/specs/my-feature.md
+Context: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md
 
 Run all phases in sequence. Stop at each phase gate and confirm outputs before proceeding.
 Do not advance past a phase until its Definition of Done is complete.
@@ -61,21 +61,21 @@ Claude Code will pause at each gate and report what was produced before continui
 At the start of a session, you can load all context files explicitly so they remain in the context window:
 
 ```
-Read and internalize: context/stack.md, context/decisions.md, context/glossary.md, specs/architecture.md
+Read and internalize: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md, .smiddy/specs/architecture.md
 ```
 
 **Resuming mid-pipeline:**
 If a session was interrupted, tell Claude Code where you left off:
 
 ```
-We completed Phase 03. Tests are not yet written. Resume from Phase 04 using spec: specs/my-feature.md
+We completed Phase 03. Tests are not yet written. Resume from Phase 04 using spec: .smiddy/specs/my-feature.md
 ```
 
 **Assigning an agent persona:**
 When a phase requires a specific agent, load the persona explicitly:
 
 ```
-Adopt the Architect persona from prompts/agents/architect.md and run Phase 02.
+Adopt the Architect persona from .smiddy/prompts/agents/architect.md and run Phase 02.
 ```
 
 ---
@@ -93,7 +93,7 @@ If a shell command requires confirmation, Claude Code will ask before running it
 
 ## Persisting Decisions
 
-Claude Code does not persist memory between sessions automatically. After Phase 02, ensure any ADRs are written to `context/decisions.md`. At the start of a new session, load that file explicitly so prior decisions are respected.
+Claude Code does not persist memory between sessions automatically. After Phase 02, ensure any ADRs are written to `.smiddy/context/decisions.md`. At the start of a new session, load that file explicitly so prior decisions are respected.
 
 ---
 
@@ -101,7 +101,7 @@ Claude Code does not persist memory between sessions automatically. After Phase 
 
 | Symptom | Resolution |
 |---|---|
-| Claude Code ignores the spec | Paste the spec contents directly, or reference it with `Read file: specs/<name>.md` |
+| Claude Code ignores the spec | Paste the spec contents directly, or reference it with `Read file: .smiddy/specs/<name>.md` |
 | Phase advances without completing DoD | Add "Confirm each item in the Definition of Done checklist before proceeding" to your prompt |
 | Out-of-scope changes being made | Remind: "Only modify files listed in the spec's Affected Components section" |
-| ADRs not being written | Explicitly instruct: "Append any new ADRs to context/decisions.md now" |
+| ADRs not being written | Explicitly instruct: "Append any new ADRs to .smiddy/context/decisions.md now" |

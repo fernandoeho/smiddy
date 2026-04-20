@@ -42,7 +42,7 @@ Before writing any code, answer these questions in the spec:
 
 Do not skip root cause analysis. Fixing symptoms instead of causes produces recurring bugs.
 
-Write a minimal spec entry in `specs/<bug-name>.md` using the template. The "Problem Statement" and "Acceptance Criteria" are required. Design sections are optional unless structural changes are needed.
+Write a minimal spec entry in `.smiddy/specs/<bug-name>.md` using the template. The "Problem Statement" and "Acceptance Criteria" are required. Design sections are optional unless structural changes are needed.
 
 ---
 
@@ -59,7 +59,7 @@ For a localized fix (single function or module), skip to Phase 03.
 
 ## Phase 03 — Implementation
 
-Follow all rules from `prompts/phases/03-implementation.md` with these additions:
+Follow all rules from `.smiddy/prompts/phases/03-implementation.md` with these additions:
 
 - **Fix the root cause, not the symptom.** If the root cause is in a different location than where the bug surfaces, fix it at the source.
 - **Do not expand scope.** A bug fix should touch the minimum code necessary. Do not refactor while fixing.
@@ -100,7 +100,7 @@ Required only if:
 ## Checklist
 
 - [ ] Root cause identified and documented
-- [ ] Spec created at `specs/<bug-name>.md`
+- [ ] Spec created at `.smiddy/specs/<bug-name>.md`
 - [ ] Fix targets root cause, not symptom
 - [ ] Regression test written and failing before fix
 - [ ] All tests pass after fix

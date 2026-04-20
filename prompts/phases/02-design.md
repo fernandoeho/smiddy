@@ -1,23 +1,23 @@
 # Phase 02 — Design
 
-**Input:** Approved spec file at `specs/<feature-name>.md` (status: Draft or In Review).
+**Input:** Approved spec file at `.smiddy/specs/<feature-name>.md` (status: Draft or In Review).
 **Output:** Completed design sections in the spec, plus any new ADR entries in `context/decisions.md`.
 
 ---
 
 ## Instructions
 
-You are operating as an **Architect**. Load the persona from `prompts/agents/architect.md` before proceeding.
+You are operating as an **Architect**. Load the persona from `.smiddy/prompts/agents/architect.md` before proceeding.
 
 Your job is to decide *how* the system will be built to satisfy the requirements — not to write implementation code.
 
 ### Step 1 — Review inputs
 
 Read in order:
-1. The active spec at `specs/<feature-name>.md`
-2. `specs/architecture.md` — understand the existing system shape
-3. `context/stack.md` — confirm the allowed tech stack
-4. `context/decisions.md` — check for standing decisions that constrain your design
+1. The active spec at `.smiddy/specs/<feature-name>.md`
+2. `.smiddy/specs/architecture.md` — understand the existing system shape
+3. `.smiddy/context/stack.md` — confirm the allowed tech stack
+4. `.smiddy/context/decisions.md` — check for standing decisions that constrain your design
 
 Do not propose designs that contradict standing decisions unless you explicitly surface a new ADR.
 
@@ -47,7 +47,7 @@ For each significant design decision, briefly state:
 - One or two alternatives considered
 - Why the chosen option wins
 
-If a decision is architecturally significant (affects multiple components, is hard to reverse, or has compliance implications), record it as an ADR in `context/decisions.md`.
+If a decision is architecturally significant (affects multiple components, is hard to reverse, or has compliance implications), record it as an ADR in `.smiddy/context/decisions.md`.
 
 ### Step 6 — Update the spec
 
@@ -65,5 +65,5 @@ If any requirement is under-specified for design purposes, add it to the spec's 
 - [ ] All interface contracts defined explicitly
 - [ ] Data model changes documented with migration plan
 - [ ] Design alternatives evaluated for significant decisions
-- [ ] New ADRs written in `context/decisions.md`
+- [ ] New ADRs written in `.smiddy/context/decisions.md`
 - [ ] Spec updated and status set to In Review

@@ -29,10 +29,10 @@ Existing files are skipped by default. Use `--force` to overwrite.
 
 ## Quick Start
 
-1. **Fill in context** — edit `context/stack.md`, `context/decisions.md`, and `context/glossary.md`.
-2. **Write a spec** — give your raw requirement to the Product Owner agent (Phase 01); it will ask clarifying questions and generate `specs/<feature-name>.md` for you.
-3. **Pick a workflow** — open the relevant file in `workflows/`.
-4. **Pick a runner** — open `runners/claude-code.md` or `runners/copilot.md` for invocation instructions.
+1. **Fill in context** — edit `.smiddy/context/stack.md`, `.smiddy/context/decisions.md`, and `.smiddy/context/glossary.md`.
+2. **Write a spec** — give your raw requirement to the Product Owner agent (Phase 01); it will ask clarifying questions and generate `.smiddy/specs/<feature-name>.md` for you.
+3. **Pick a workflow** — open the relevant file in `.smiddy/workflows/`.
+4. **Pick a runner** — open `.smiddy/runners/claude-code.md` or `.smiddy/runners/copilot.md` for invocation instructions.
 5. **Run the pipeline** — follow the phase sequence, feeding each phase prompt to your chosen AI tool.
 
 ---
@@ -41,12 +41,12 @@ Existing files are skipped by default. Use `--force` to overwrite.
 
 | Phase | Prompt | Output |
 |---|---|---|
-| 01 Requirements | `prompts/phases/01-requirements.md` | Acceptance criteria, constraints — driven by the Product Owner agent |
-| 02 Design | `prompts/phases/02-design.md` | Architecture decisions, interfaces — driven by the Architect agent |
-| 03 Implementation | `prompts/phases/03-implementation.md` | Working code — driven by the Developer agent |
-| 04 Tests | `prompts/phases/04-tests.md` | Test suite — driven by the Developer agent |
-| 05 Review | `prompts/phases/05-review.md` | Review report — driven by the Reviewer agent |
-| 06 Docs | `prompts/phases/06-docs.md` | Documentation |
+| 01 Requirements | `.smiddy/prompts/phases/01-requirements.md` | Acceptance criteria, constraints — driven by the Product Owner agent |
+| 02 Design | `.smiddy/prompts/phases/02-design.md` | Architecture decisions, interfaces — driven by the Architect agent |
+| 03 Implementation | `.smiddy/prompts/phases/03-implementation.md` | Working code — driven by the Developer agent |
+| 04 Tests | `.smiddy/prompts/phases/04-tests.md` | Test suite — driven by the Developer agent |
+| 05 Review | `.smiddy/prompts/phases/05-review.md` | Review report — driven by the Reviewer agent |
+| 06 Docs | `.smiddy/prompts/phases/06-docs.md` | Documentation |
 
 Phases are sequential by default. Workflows may permit skipping phases for specific scenarios (e.g. bug fixes).
 
@@ -66,4 +66,4 @@ You can use both simultaneously — Claude Code for pipeline orchestration, Copi
 
 ## Contributing
 
-Prompts live in `prompts/`. Keep them tool-agnostic — no tool-specific syntax. Runner-specific instructions belong exclusively in `runners/`.
+Prompts live in `.smiddy/prompts/`. Keep them tool-agnostic — no tool-specific syntax. Runner-specific instructions belong exclusively in `.smiddy/runners/`.

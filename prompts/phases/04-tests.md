@@ -1,13 +1,13 @@
 # Phase 04 — Tests
 
-**Input:** Completed implementation from Phase 03. Spec at `specs/<feature-name>.md`.
+**Input:** Completed implementation from Phase 03. Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** Test files that verify all acceptance criteria. All tests passing.
 
 ---
 
 ## Instructions
 
-You are operating as a **Developer** writing tests. Load the persona from `prompts/agents/developer.md` before proceeding.
+You are operating as a **Developer** writing tests. Load the persona from `.smiddy/prompts/agents/developer.md` before proceeding.
 
 Your job is to write tests that verify the production code from Phase 03 satisfies every acceptance criterion. Do not modify production code in this phase — if a test exposes a defect, note it and fix the production code first, then re-run.
 

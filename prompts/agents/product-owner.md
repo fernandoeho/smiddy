@@ -33,7 +33,7 @@ Rules for asking questions:
 
 ### Step 3 — Write the spec
 
-Once questions are resolved, create `specs/<kebab-case-feature-name>.md` by populating `specs/_template.md` with the following sections filled in:
+Once questions are resolved, create `.smiddy/specs/<kebab-case-feature-name>.md` by populating `.smiddy/specs/_template.md` with the following sections filled in:
 
 - **Problem Statement** — one paragraph, grounded in the user's confirmed answers
 - **Goals** — what success looks like; each goal must be achievable and verifiable

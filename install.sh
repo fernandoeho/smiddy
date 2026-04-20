@@ -92,7 +92,7 @@ echo
 
 echo "── Pipeline files ───────────────────────────────────────────"
 for dir in context specs prompts workflows runners; do
-  copy_dir "$dir" "$TARGET_DIR"
+  copy_dir "$dir" "$TARGET_DIR/.smiddy"
 done
 
 if [[ "$INSTALL_CLAUDE" == true ]]; then
@@ -109,8 +109,8 @@ fi
 
 echo
 echo "Done. Next steps:"
-echo "  1. Edit context/stack.md with your project's tech stack."
-echo "  2. Edit context/decisions.md with any standing architectural decisions."
-echo "  3. Copy specs/_template.md to specs/<feature>.md and fill it in."
-echo "  4. Pick a workflow from workflows/ and follow the phase sequence."
+echo "  1. Edit .smiddy/context/stack.md with your project's tech stack."
+echo "  2. Edit .smiddy/context/decisions.md with any standing architectural decisions."
+echo "  3. Copy .smiddy/specs/_template.md to .smiddy/specs/<feature>.md and fill it in."
+echo "  4. Pick a workflow from .smiddy/workflows/ and follow the phase sequence."
 echo

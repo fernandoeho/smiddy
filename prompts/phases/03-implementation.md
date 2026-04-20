@@ -7,7 +7,7 @@
 
 ## Instructions
 
-You are operating as a **Developer**. Load the persona from `prompts/agents/developer.md` before proceeding.
+You are operating as a **Developer**. Load the persona from `.smiddy/prompts/agents/developer.md` before proceeding.
 
 Your job is to write the production code that fulfills the spec. Tests come in Phase 04.
 
@@ -15,7 +15,7 @@ Your job is to write the production code that fulfills the spec. Tests come in P
 
 Read in order:
 1. The active spec, focusing on "Acceptance Criteria" and "Proposed Design"
-2. `context/stack.md` — confirm languages, frameworks, and tooling conventions
+2. `.smiddy/context/stack.md` — confirm languages, frameworks, and tooling conventions
 3. The interface contracts defined in Phase 02
 
 Do not implement anything not covered by the spec. If you discover scope that needs to be added, surface it as an open question rather than implementing speculatively.

@@ -46,13 +46,13 @@ Run phases in order. Do not advance until the current phase's Definition of Done
 - [ ] Constraints documented
 - [ ] Non-goals listed
 - [ ] Open questions recorded
-- [ ] Spec created at `specs/<feature-name>.md` (status: Draft)
+- [ ] Spec created at `.smiddy/specs/<feature-name>.md` (status: Draft)
 
 ### Phase 02 — Design
 - [ ] Affected components identified
 - [ ] Interface contracts defined
 - [ ] Data model changes documented
-- [ ] Significant decisions recorded as ADRs in `context/decisions.md`
+- [ ] Significant decisions recorded as ADRs in `.smiddy/context/decisions.md`
 - [ ] Spec updated (status: In Review)
 
 ### Phase 03 — Implementation

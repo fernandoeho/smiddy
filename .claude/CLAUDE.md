@@ -8,22 +8,22 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 
 ## Operating Principles
 
-- Read `context/stack.md` at the start of every session to understand the tech stack.
-- Read `context/decisions.md` to respect standing architectural decisions.
-- Read `context/glossary.md` to use consistent terminology.
-- Before writing any code, confirm the active spec exists under `specs/` and is complete.
+- Read `.smiddy/context/stack.md` at the start of every session to understand the tech stack.
+- Read `.smiddy/context/decisions.md` to respect standing architectural decisions.
+- Read `.smiddy/context/glossary.md` to use consistent terminology.
+- Before writing any code, confirm the active spec exists under `.smiddy/specs/` and is complete.
 - Do not skip phases. If a required output from a prior phase is missing, stop and ask.
 
 ## Phase Execution
 
 Run phases in order unless the active workflow explicitly permits skipping:
 
-1. `prompts/phases/01-requirements.md`
-2. `prompts/phases/02-design.md`
-3. `prompts/phases/03-implementation.md`
-4. `prompts/phases/04-tests.md`
-5. `prompts/phases/05-review.md`
-6. `prompts/phases/06-docs.md`
+1. `.smiddy/prompts/phases/01-requirements.md`
+2. `.smiddy/prompts/phases/02-design.md`
+3. `.smiddy/prompts/phases/03-implementation.md`
+4. `.smiddy/prompts/phases/04-tests.md`
+5. `.smiddy/prompts/phases/05-review.md`
+6. `.smiddy/prompts/phases/06-docs.md`
 
 At the end of each phase, write a brief summary of outputs produced before proceeding.
 
@@ -31,10 +31,10 @@ At the end of each phase, write a brief summary of outputs produced before proce
 
 When a phase prompt references an agent role, load the corresponding persona:
 
-- **Product Owner** → `prompts/agents/product-owner.md`
-- **Architect** → `prompts/agents/architect.md`
-- **Developer** → `prompts/agents/developer.md`
-- **Reviewer** → `prompts/agents/reviewer.md`
+- **Product Owner** → `.smiddy/prompts/agents/product-owner.md`
+- **Architect** → `.smiddy/prompts/agents/architect.md`
+- **Developer** → `.smiddy/prompts/agents/developer.md`
+- **Reviewer** → `.smiddy/prompts/agents/reviewer.md`
 
 ## Constraints
 
@@ -53,4 +53,4 @@ Shell commands are available. Prefer them for:
 
 ## Memory
 
-Persist cross-session decisions by appending to `context/decisions.md`, not by relying on conversation history.
+Persist cross-session decisions by appending to `.smiddy/context/decisions.md`, not by relying on conversation history.
