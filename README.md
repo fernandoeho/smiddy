@@ -29,7 +29,7 @@ Existing files are skipped by default. Use `--force` to overwrite.
 
 ## Quick Start
 
-1. **Fill in context** — edit `.smiddy/context/stack.md`, `.smiddy/context/decisions.md`, and `.smiddy/context/glossary.md`.
+1. **Fill in context** — edit `.smiddy/context/product.md`, `.smiddy/context/stack.md`, `.smiddy/context/decisions.md`, and `.smiddy/context/glossary.md`.
 2. **Write a spec** — give your raw requirement to the Product Owner agent (Phase 01); it will ask clarifying questions and generate `.smiddy/specs/<feature-name>.md` for you.
 3. **Pick a workflow** — open the relevant file in `.smiddy/workflows/`.
 4. **Pick a runner** — open `.smiddy/runners/claude-code.md` or `.smiddy/runners/copilot.md` for invocation instructions.
