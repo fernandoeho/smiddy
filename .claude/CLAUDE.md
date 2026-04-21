@@ -8,6 +8,7 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 
 ## Operating Principles
 
+- Read `.smiddy/context/product.md` at the start of every session to understand what the product is and what scope is valid.
 - Read `.smiddy/context/stack.md` at the start of every session to understand the tech stack.
 - Read `.smiddy/context/decisions.md` to respect standing architectural decisions.
 - Read `.smiddy/context/glossary.md` to use consistent terminology.
