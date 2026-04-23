@@ -12,14 +12,6 @@ Read .smiddy/prompts/setup/stack-discovery.md and follow its instructions agains
 
 ---
 
-## Load Context (start of each session)
-
-```
-Read and internalize: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md, .smiddy/specs/architecture.md
-```
-
----
-
 ## Phase 01 — Requirements
 
 ```
@@ -92,9 +84,8 @@ Read .smiddy/prompts/phases/06-docs.md and follow its instructions.
 ```
 Workflow: .smiddy/workflows/new-feature.md
 Spec: .smiddy/specs/my-feature.md
-Context: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md
 
-Run all phases in sequence. Stop at each phase gate and confirm outputs before proceeding.
+Run all phases in sequence. For each phase, read the phase prompt and load the files listed in its Requires block before proceeding. Stop at each phase gate and confirm outputs before advancing.
 Do not advance past a phase until its Definition of Done is complete.
 ```
 

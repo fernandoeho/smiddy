@@ -3,6 +3,9 @@
 **Input:** Completed implementation from Phase 03. Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** Test files that verify all acceptance criteria. All tests passing.
 
+**Requires:**
+- `.smiddy/context/stack.md` — test framework and tooling conventions
+
 ---
 
 ## Instructions

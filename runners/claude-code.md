@@ -69,11 +69,11 @@ Claude Code will pause at each gate and report what was produced before continui
 
 ## Useful Patterns
 
-**Loading context once per session:**
-At the start of a session, you can load all context files explicitly so they remain in the context window:
+**Loading context per phase:**
+Each phase prompt declares its required files in a `Requires:` block. Load only those files before running the phase — do not load all context files up front. Example for Phase 02:
 
 ```
-Read and internalize: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md, .smiddy/specs/architecture.md
+Read .smiddy/specs/architecture.md, .smiddy/context/stack.md, .smiddy/context/decisions.md, then run Phase 02 using spec: .smiddy/specs/my-feature.md
 ```
 
 **Resuming mid-pipeline:**
