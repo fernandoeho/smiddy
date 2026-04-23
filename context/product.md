@@ -1,8 +1,8 @@
 # Product Context
 
-_Fill this in before running any pipeline phase. The AI agent reads this file to
+<!-- Fill this in before running any pipeline phase. The AI agent reads this file to
 understand what the product is, who it serves, and what constitutes a valid feature.
-It is used to evaluate scope during Phase 01 (Requirements) and Phase 05 (Review)._
+It is used to evaluate scope during Phase 01 (Requirements) and Phase 05 (Review). -->
 
 ---
 

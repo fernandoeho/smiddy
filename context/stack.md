@@ -1,6 +1,6 @@
 # Tech Stack
 
-_Fill this in before running any pipeline phase. The AI agent reads this file to constrain its suggestions to your actual stack._
+<!-- Fill this in before running any pipeline phase. The AI agent reads this file to constrain its suggestions to your actual stack. -->
 
 ---
 
@@ -58,19 +58,19 @@ _Fill this in before running any pipeline phase. The AI agent reads this file to
 
 ## Conventions
 
-_Describe any team-specific conventions not derivable from the tooling above._
+<!-- Describe any team-specific conventions not derivable from the tooling above. -->
 
 ### Naming
-_e.g., snake_case for Python modules, PascalCase for TypeScript classes_
+<!-- e.g., snake_case for Python modules, PascalCase for TypeScript classes -->
 
 ### File structure
-_e.g., feature-based folders, layer-based folders_
+<!-- e.g., feature-based folders, layer-based folders -->
 
 ### Branch naming
-_e.g., feature/*, fix/*, release/*_
+<!-- e.g., feature/*, fix/*, release/* -->
 
 ### Commit format
-_e.g., Conventional Commits — type(scope): description_
+<!-- e.g., Conventional Commits — type(scope): description -->
 
 ### Error handling
-_e.g., Result types, exception hierarchy, error codes_
+<!-- e.g., Result types, exception hierarchy, error codes -->

@@ -4,6 +4,9 @@
 **Input:** A problem statement or feature request (free-form text, issue ticket, or user request).
 **Output:** A completed spec file saved to `specs/<feature-name>.md` with all sections through "Acceptance Criteria" filled in.
 
+**Requires:**
+- `.smiddy/context/product.md` — product scope and boundaries
+
 ---
 
 ## Instructions

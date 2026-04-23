@@ -3,6 +3,9 @@
 **Input:** Approved implementation (Phase 05 review: Approved). Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** Updated documentation. Spec status set to Done.
 
+**Requires:**
+- `.smiddy/specs/architecture.md` — to update if structure changed
+
 ---
 
 ## Instructions

@@ -1,23 +1,19 @@
 # Glossary
 
-_Shared vocabulary for this project. The AI agent reads this file to use consistent terminology in all generated artifacts._
+<!-- Shared vocabulary for this project. The AI agent reads this file to use consistent terminology in all generated artifacts.
 
 Fill in terms that are specific to your domain, product, or team. Avoid defining general programming terms — focus on words that have a specific, non-obvious meaning in this project's context.
 
----
-
 ## How to Add an Entry
 
-```
 ### [Term]
 
 **Definition:** [What it means in this project's context]
 **Also known as:** [Synonyms used elsewhere, if any]
 **Not to be confused with:** [Similar terms that mean something different here]
 **Example:** [Optional — a sentence showing correct usage]
-```
 
-Keep definitions short. If a term requires more than two sentences, the concept probably deserves a spec or ADR entry instead.
+Keep definitions short. If a term requires more than two sentences, the concept probably deserves a spec or ADR entry instead. -->
 
 ---
 

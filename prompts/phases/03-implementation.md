@@ -3,6 +3,9 @@
 **Input:** Approved spec at `specs/<feature-name>.md` (status: In Review or Approved).
 **Output:** Production code changes committed. No test files written in this phase.
 
+**Requires:**
+- `.smiddy/context/stack.md` — languages, frameworks, and tooling conventions
+
 ---
 
 ## Instructions

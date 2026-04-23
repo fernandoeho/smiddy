@@ -3,6 +3,11 @@
 **Input:** Implementation and tests from Phases 03–04. Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** A written review report. Either an approval or a list of blocking and non-blocking issues.
 
+**Requires:**
+- `.smiddy/specs/architecture.md` — architectural consistency check
+- `.smiddy/context/decisions.md` — standing decisions that must not be violated
+- `.smiddy/context/stack.md` — allowed technologies
+
 ---
 
 ## Instructions

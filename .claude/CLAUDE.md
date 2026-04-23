@@ -8,10 +8,7 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 
 ## Operating Principles
 
-- Read `.smiddy/context/product.md` at the start of every session to understand what the product is and what scope is valid.
-- Read `.smiddy/context/stack.md` at the start of every session to understand the tech stack.
-- Read `.smiddy/context/decisions.md` to respect standing architectural decisions.
-- Read `.smiddy/context/glossary.md` to use consistent terminology.
+- Load only the context files listed in the active phase prompt's `Requires:` block. Do not load all context files up front.
 - Before writing any code, confirm the active spec exists under `.smiddy/specs/` and is complete.
 - Do not skip phases. If a required output from a prior phase is missing, stop and ask.
 
@@ -41,9 +38,6 @@ When a phase prompt references an agent role, load the corresponding persona:
 
 - Do not commit code without passing tests unless explicitly instructed.
 - Do not modify files outside the scope of the active spec without flagging it.
-- Do not invent requirements. If a requirement is ambiguous, surface it as a question rather than assuming.
-- Prefer editing existing files over creating new ones.
-- Write no speculative code (YAGNI).
 
 ## Tool Use
 

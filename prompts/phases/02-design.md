@@ -3,6 +3,11 @@
 **Input:** Approved spec file at `.smiddy/specs/<feature-name>.md` (status: Draft or In Review).
 **Output:** Completed design sections in the spec, plus any new ADR entries in `context/decisions.md`.
 
+**Requires:**
+- `.smiddy/specs/architecture.md` — existing system shape
+- `.smiddy/context/stack.md` — allowed tech stack
+- `.smiddy/context/decisions.md` — standing architectural decisions
+
 ---
 
 ## Instructions
