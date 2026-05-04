@@ -58,19 +58,4 @@
 
 ## Conventions
 
-<!-- Describe any team-specific conventions not derivable from the tooling above. -->
-
-### Naming
-<!-- e.g., snake_case for Python modules, PascalCase for TypeScript classes -->
-
-### File structure
-<!-- e.g., feature-based folders, layer-based folders -->
-
-### Branch naming
-<!-- e.g., feature/*, fix/*, release/* -->
-
-### Commit format
-<!-- e.g., Conventional Commits — type(scope): description -->
-
-### Error handling
-<!-- e.g., Result types, exception hierarchy, error codes -->
+Coding conventions (naming, file structure, error handling patterns, etc.) are documented as standards in `.smiddy/standards/`. Run `.smiddy/prompts/setup/standards-discovery.md` to extract them from your codebase.

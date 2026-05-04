@@ -5,8 +5,9 @@
 
 **Requires:**
 - `.smiddy/context/architecture.md` — architectural consistency check
-- `.smiddy/context/decisions.md` — standing decisions that must not be violated
+- `.smiddy/decisions/index.yml` — index of standing architectural decisions
 - `.smiddy/context/stack.md` — allowed technologies
+- `.smiddy/standards/index.yml` — existing standards to check compliance against (if populated)
 
 ---
 
@@ -21,8 +22,9 @@ Your job is to critically evaluate the work produced in Phase 03 against the spe
 Read in order:
 1. The active spec — particularly acceptance criteria, design decisions, and constraints
 2. `.smiddy/context/architecture.md` — check for architectural consistency
-3. `.smiddy/context/decisions.md` — check that no standing decision was violated
+3. `.smiddy/decisions/index.yml` — scan area tags to identify ADRs relevant to what changed; read only those ADR files from `.smiddy/decisions/`
 4. `.smiddy/context/stack.md` — check that only allowed technologies were used
+5. `.smiddy/standards/index.yml` — if populated, identify and read standards relevant to what was changed
 
 ### Step 2 — Review correctness
 
@@ -60,7 +62,24 @@ Check for OWASP Top 10 issues relevant to the change:
 - Are there edge cases in the acceptance criteria with no test coverage?
 - Would the tests catch a regression if the implementation were changed?
 
-### Step 6 — Write the review report
+### Step 6 — Flag standard candidates
+
+While reviewing the code, watch for patterns introduced or confirmed by this feature that are worth preserving as standards. A good candidate is:
+
+- **New and reusable** — a pattern the Developer established that other features should follow
+- **Non-obvious** — something a future agent or new developer would not know without being told
+- **Consistent** — already applied correctly across the new code, not a one-off
+
+Do not flag patterns that are already in `.smiddy/standards/index.yml`, are standard framework behavior, or are obvious from the tooling.
+
+For each candidate, note:
+- A short name
+- The pattern in one sentence
+- 1–2 example locations in the code
+
+These will be written as standards in Phase 05. If there are no candidates, record "None."
+
+### Step 7 — Write the review report
 
 Structure your report as:
 
@@ -81,6 +100,10 @@ Structure your report as:
 ### Non-Blocking Issues
 - [Issue]: [description and location] — recommended but not required
 
+### Standards Candidates
+- [Name]: [one-sentence description] — see [file:line]
+(or "None")
+
 ### Approval Decision
 [ ] Approved
 [ ] Approved with minor changes (non-blocking only)
@@ -94,6 +117,7 @@ Structure your report as:
 - [ ] Every acceptance criterion evaluated and status recorded
 - [ ] Security review completed
 - [ ] Test quality evaluated
+- [ ] Standards candidates identified (or explicitly recorded as "None")
 - [ ] Review report written with explicit approval decision
 - [ ] All blocking issues described with enough detail to act on
 - [ ] Spec status updated to Approved (if no blockers) or left In Review (if blockers exist)

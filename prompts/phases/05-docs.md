@@ -5,6 +5,7 @@
 
 **Requires:**
 - `.smiddy/context/architecture.md` — to update if structure changed
+- `.smiddy/standards/index.yml` — to update if new standards were flagged in Phase 04
 
 ---
 
@@ -53,7 +54,28 @@ If the feature changes how developers set up, run, or configure the project:
 - Update the relevant README section
 - Verify that the setup instructions still work end-to-end
 
-### Step 6 — Close the spec
+### Step 6 — Write flagged standards
+
+Read the "Standards Candidates" section of the Phase 04 review report.
+
+If candidates were listed:
+
+For each candidate, draft a standard file following the format in `prompts/setup/standards-discovery.md` (Name, Pattern, Rules, Why, Exceptions). Use the code introduced in this feature as the code example — it is the authoritative implementation of the pattern.
+
+Write each standard to `.smiddy/standards/<category>/<standard-name>.md` and add an entry to `.smiddy/standards/index.yml`:
+
+```yaml
+<category>:
+  <standard-name>:
+    description: <one-line description>
+    file: <category>/<standard-name>.md
+```
+
+Keep entries alphabetical within each category.
+
+If the Phase 04 report recorded "None" for Standards Candidates, skip this step.
+
+### Step 7 — Close the spec
 
 Update `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`:
 - Set status to **Done**
@@ -68,5 +90,6 @@ Update `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md
 - [ ] Architecture docs updated if structure changed
 - [ ] Changelog entry added for all user-visible changes
 - [ ] README updated if setup or usage changed
+- [ ] Flagged standards written to `.smiddy/standards/` and index updated (or "None" confirmed)
 - [ ] Spec status set to Done
 - [ ] No documentation describes a state that no longer exists

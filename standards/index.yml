@@ -1,0 +1,16 @@
+# Smiddy Standards Index
+#
+# Format:
+#   category:
+#     standard-name:
+#       description: one-line description used to decide relevance
+#       file: category/standard-name.md
+#
+# Maintained by the standards-discovery prompt and Phase 05. Add entries alphabetically
+# within each category. Do not remove entries — if a standard is retired,
+# mark it with a `retired: true` flag and leave the file in place.
+
+api:
+  response-envelope:
+    description: All API responses use { success, data, error } envelope
+    file: api/response-envelope.md

@@ -1,0 +1,15 @@
+# Smiddy ADR Index
+#
+# Format:
+#   ADR-NNN:
+#     title: Short title matching the ADR file heading
+#     status: Proposed | Accepted | Superseded by ADR-NNN
+#     date: YYYY-MM-DD
+#     areas: [api, auth, database, frontend, infrastructure, testing, ...]
+#     file: ADR-NNN-short-title.md
+#
+# Maintained by Phase 02. Add an entry here whenever a new ADR file is created.
+# Do not remove entries — if a decision is superseded, update status and keep the entry.
+#
+# Areas guide selective loading: phases read this index first, then load only the
+# ADR files whose areas overlap with the current work.
