@@ -1,6 +1,6 @@
 # Phase 03 — Build
 
-**Input:** Approved spec at `specs/<feature-name>.md` (status: In Review or Approved).
+**Input:** Approved spec at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` (status: In Review or Approved).
 **Output:** Production code and tests committed. All tests passing.
 
 **Requires:**

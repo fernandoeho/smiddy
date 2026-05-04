@@ -1,5 +1,13 @@
 # System Architecture
 
+<!--
+  New project: leave this file blank. The Architect agent (Phase 02) will populate it.
+  Existing project: run .smiddy/prompts/setup/architecture-discovery.md before Phase 02,
+  or fill it in manually. The AI reads this file to understand the current system shape
+  before designing new features.
+  Living document: update via Phase 05 whenever structure changes.
+-->
+
 **Status:** Living document — update when significant structural decisions are made.
 **Last updated:** [YYYY-MM-DD]
 
@@ -60,17 +68,6 @@ _Describe the trigger, steps, and terminal state._
 ## Authentication & Authorization
 
 _Describe the auth model: who authenticates, how sessions/tokens work, what the permission model looks like._
-
----
-
-## Infrastructure
-
-| Concern | Technology | Notes |
-|---|---|---|
-| Hosting | | |
-| CI/CD | | |
-| Observability | | |
-| Secrets management | | |
 
 ---
 

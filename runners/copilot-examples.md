@@ -6,11 +6,20 @@ Open Copilot Chat with `Cmd+Option+I` (Mac) or `Ctrl+Alt+I` (Windows/Linux).
 
 ---
 
-## Setup — Stack Discovery (existing projects, run once)
+## Setup — Discovery (existing projects, run once)
 
+Stack discovery:
 ```
 @workspace
 #file:.smiddy/prompts/setup/stack-discovery.md
+
+Follow the instructions in this file against the current project.
+```
+
+Architecture discovery (run after stack discovery):
+```
+@workspace
+#file:.smiddy/prompts/setup/architecture-discovery.md
 
 Follow the instructions in this file against the current project.
 ```
@@ -22,7 +31,7 @@ Follow the instructions in this file against the current project.
 ```
 @workspace
 #file:.smiddy/context/product.md
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/01-requirements.md
 #file:.smiddy/prompts/agents/product-owner.md
 
@@ -36,10 +45,10 @@ Run Phase 01 against the following feature request:
 
 ```
 @workspace
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/02-design.md
 #file:.smiddy/prompts/agents/architect.md
-#file:.smiddy/specs/architecture.md
+#file:.smiddy/context/architecture.md
 #file:.smiddy/context/stack.md
 #file:.smiddy/context/decisions.md
 
@@ -52,7 +61,7 @@ Run Phase 02. Follow the instructions in the phase prompt.
 
 ```
 @workspace
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/03-build.md
 #file:.smiddy/prompts/agents/developer.md
 #file:.smiddy/context/stack.md
@@ -63,7 +72,7 @@ Run Phase 03. Implement all acceptance criteria and write tests for each one.
 For targeted inline edits, use inline chat (`Cmd+I` / `Ctrl+I`) on the relevant file:
 
 ```
-Implement AC-2 from .smiddy/specs/my-feature.md: [paste the criterion]
+Implement AC-2 from .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md: [paste the criterion]
 ```
 
 ---
@@ -72,10 +81,10 @@ Implement AC-2 from .smiddy/specs/my-feature.md: [paste the criterion]
 
 ```
 @workspace
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/04-review.md
 #file:.smiddy/prompts/agents/reviewer.md
-#file:.smiddy/specs/architecture.md
+#file:.smiddy/context/architecture.md
 #file:.smiddy/context/decisions.md
 #file:.smiddy/context/stack.md
 
@@ -88,9 +97,9 @@ Run Phase 04. Evaluate the implementation against the spec and report any blocki
 
 ```
 @workspace
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/05-docs.md
-#file:.smiddy/specs/architecture.md
+#file:.smiddy/context/architecture.md
 
 Run Phase 05. Update documentation for all changes made in this pipeline run.
 ```
@@ -101,10 +110,10 @@ Run Phase 05. Update documentation for all changes made in this pipeline run.
 
 ```
 @workspace
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/04-review.md
 #file:.smiddy/prompts/agents/reviewer.md
-#file:.smiddy/specs/architecture.md
+#file:.smiddy/context/architecture.md
 #file:.smiddy/context/decisions.md
 #file:.smiddy/context/stack.md
 
