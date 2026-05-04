@@ -91,7 +91,7 @@ echo "Installing Smiddy into: $TARGET_DIR"
 echo
 
 echo "── Pipeline files ───────────────────────────────────────────"
-for dir in context specs prompts workflows runners; do
+for dir in context specs prompts docs; do
   copy_dir "$dir" "$TARGET_DIR/.smiddy"
 done
 
@@ -114,5 +114,5 @@ echo "     Claude Code: ask it to read .smiddy/prompts/setup/stack-discovery.md"
 echo "     Copilot:     attach .smiddy/prompts/setup/stack-discovery.md in chat with @workspace"
 echo "  2. Edit .smiddy/context/decisions.md with any standing architectural decisions."
 echo "  3. Create .smiddy/specs/<yyyy-mm-dd>-<feature>/ and copy .smiddy/specs/_template.md into it as <yyyy-mm-dd>-<feature>.md."
-echo "  4. Pick a workflow from .smiddy/workflows/ and follow the phase sequence."
+echo "  4. Run the phases in order. See .smiddy/docs/ for invocation patterns."
 echo

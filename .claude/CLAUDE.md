@@ -8,13 +8,15 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 
 ## Operating Principles
 
-- Load only the context files listed in the active phase prompt's `Requires:` block. Do not load all context files up front.
+- Only use context files listed in the active phase prompt's `Requires:` block. Do not load all context files up front.
 - Before writing any code, confirm the active spec exists under `.smiddy/specs/` and is complete.
 - Do not skip phases. If a required output from a prior phase is missing, stop and ask.
+- Respect architectural decisions recorded in `.smiddy/context/decisions.md`.
+- Use terminology from `.smiddy/context/glossary.md` consistently.
 
 ## Phase Execution
 
-Run phases in order unless the active workflow explicitly permits skipping:
+Run phases in order:
 
 1. `.smiddy/prompts/phases/01-requirements.md`
 2. `.smiddy/prompts/phases/02-design.md`
@@ -23,6 +25,14 @@ Run phases in order unless the active workflow explicitly permits skipping:
 5. `.smiddy/prompts/phases/05-docs.md`
 
 At the end of each phase, write a brief summary of outputs produced before proceeding.
+
+| Phase file | Expected outputs |
+|---|---|
+| `01-requirements.md` | User stories, acceptance criteria, constraints list |
+| `02-design.md` | Component diagram, interface contracts, data models |
+| `03-build.md` | Production code and tests |
+| `04-review.md` | Review comments, issue list, approval decision |
+| `05-docs.md` | Docstrings, README sections, changelog entry |
 
 ## Agent Personas
 
@@ -35,8 +45,11 @@ When a phase prompt references an agent role, load the corresponding persona:
 
 ## Constraints
 
+- Do not write code that has no corresponding requirement in the active spec.
+- Do not modify files outside the scope of the active phase without flagging it.
+- Surface ambiguous requirements as explicit questions rather than making assumptions.
+- Prefer the smallest change that satisfies the requirement.
 - Do not commit code without passing tests unless explicitly instructed.
-- Do not modify files outside the scope of the active spec without flagging it.
 
 ## Tool Use
 
@@ -48,3 +61,7 @@ Shell commands are available. Prefer them for:
 ## Memory
 
 Persist cross-session decisions by appending to `.smiddy/context/decisions.md`, not by relying on conversation history.
+
+## Documentation
+
+For invocation patterns, examples, and troubleshooting, see `.smiddy/docs/claude-code.md`.
