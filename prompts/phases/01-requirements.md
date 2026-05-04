@@ -64,6 +64,45 @@ Create the folder `.smiddy/specs/<yyyy-mm-dd>-<kebab-case-feature-name>/` (using
 
 Set the spec status to **Draft**.
 
+Create `.pipeline-state.yml` in the same folder with this initial content (substituting today's date):
+
+```yaml
+spec: <yyyy-mm-dd>-<feature-name>.md
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+
+pipeline:
+  current_phase: 1
+  current_phase_name: requirements
+
+phases:
+  requirements:
+    status: in_progress
+    started_at: YYYY-MM-DD
+    completed_at: null
+    gate_passed: null
+  design:
+    status: pending
+    started_at: null
+    completed_at: null
+    gate_passed: null
+  build:
+    status: pending
+    started_at: null
+    completed_at: null
+    gate_passed: null
+  review:
+    status: pending
+    started_at: null
+    completed_at: null
+    gate_passed: null
+  docs:
+    status: pending
+    started_at: null
+    completed_at: null
+    gate_passed: null
+```
+
 ---
 
 ## Definition of Done for This Phase
@@ -74,3 +113,5 @@ Set the spec status to **Draft**.
 - [ ] Non-goals explicitly listed
 - [ ] Open questions recorded
 - [ ] Spec file created at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` with status: Draft
+
+**State update:** When all items above are checked, update `.pipeline-state.yml` — set `phases.requirements.status` to `done`, `completed_at` to today's date, and advance `pipeline.current_phase` to `2` and `current_phase_name` to `design`.

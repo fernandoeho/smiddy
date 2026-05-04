@@ -13,7 +13,9 @@
 
 Before writing any code, run the gate at `.smiddy/governance/gates/design-to-build.md` against the active spec.
 
-If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
+If the gate **passes**: update `.pipeline-state.yml` — set `phases.build.status` to `in_progress`, `started_at` to today's date, `phases.design.gate_passed` to `true`, and `pipeline.current_phase_name` to `build`.
+
+If the gate **fails**: update `.pipeline-state.yml` — set `phases.design.status` to `blocked` and `phases.design.gate_passed` to `false`. Report each failing item to the user and do not proceed until they are resolved.
 
 ---
 
@@ -117,3 +119,5 @@ If you discovered adjacent issues while implementing, record them in the spec's 
 - [ ] Any untestable criteria have documented manual procedures
 - [ ] Out-of-scope findings recorded in spec
 - [ ] Code follows existing conventions in the codebase
+
+**State update:** When all items above are checked, update `.pipeline-state.yml` — set `phases.build.status` to `done`, `completed_at` to today's date, and advance `pipeline.current_phase` to `4` and `current_phase_name` to `review`.

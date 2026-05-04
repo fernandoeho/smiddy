@@ -15,7 +15,9 @@
 
 Before doing any design work, run the gate at `.smiddy/governance/gates/requirements-to-design.md` against the active spec.
 
-If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
+If the gate **passes**: update `.pipeline-state.yml` — set `phases.design.status` to `in_progress`, `started_at` to today's date, `phases.requirements.gate_passed` to `true`, and `pipeline.current_phase_name` to `design`.
+
+If the gate **fails**: update `.pipeline-state.yml` — set `phases.requirements.status` to `blocked` and `phases.requirements.gate_passed` to `false`. Report each failing item to the user and do not proceed until they are resolved.
 
 ---
 
@@ -84,3 +86,5 @@ If any requirement is under-specified for design purposes, add it to the spec's 
 - [ ] Design alternatives evaluated for significant decisions
 - [ ] New ADR files written in `.smiddy/governance/decisions/` and index updated
 - [ ] Spec updated and status set to In Review
+
+**State update:** When all items above are checked, update `.pipeline-state.yml` — set `phases.design.status` to `done`, `completed_at` to today's date, and advance `pipeline.current_phase` to `3` and `current_phase_name` to `build`.

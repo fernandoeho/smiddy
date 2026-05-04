@@ -5,6 +5,7 @@
 **Created:** [YYYY-MM-DD]
 **Last updated:** [YYYY-MM-DD]
 **Workflow:** [new-feature | bug-fix]
+**State file:** `.pipeline-state.yml` (created by Phase 01 alongside this file)
 
 ---
 
