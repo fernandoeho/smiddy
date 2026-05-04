@@ -13,10 +13,11 @@ This guide explains how to invoke the Smiddy pipeline using GitHub Copilot in VS
 
 ---
 
-## Filling in the Stack (Existing Projects)
+## Discovering Context (Existing Projects)
 
-If you installed Smiddy into a project that already has code, run the stack discovery prompt once before starting any pipeline phase. Open Copilot Chat and send:
+If you installed Smiddy into a project that already has code, run these two discovery prompts once before starting any pipeline phase. Open Copilot Chat and send them sequentially.
 
+**Stack discovery** — scans config files and dependencies:
 ```
 @workspace
 #file:.smiddy/prompts/setup/stack-discovery.md
@@ -24,7 +25,17 @@ If you installed Smiddy into a project that already has code, run the stack disc
 Follow the instructions in this file against the current project.
 ```
 
-Review the output, apply it to `.smiddy/context/stack.md` using the VS Code diff editor, and fill in anything Copilot could not determine automatically.
+**Architecture discovery** — scans source code for component structure and data flows:
+```
+@workspace
+#file:.smiddy/prompts/setup/architecture-discovery.md
+
+Follow the instructions in this file against the current project.
+```
+
+Review each output and apply it using the VS Code diff editor. Fill in anything Copilot could not determine automatically.
+
+> **New projects:** Skip architecture discovery. The Architect agent in Phase 02 will create `.smiddy/context/architecture.md` from scratch.
 
 ---
 
@@ -45,7 +56,7 @@ For each phase, reference the active spec and the phase prompt file by attaching
 **Example — starting Phase 01:**
 ```
 @workspace
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 Phase prompt: .smiddy/prompts/phases/01-requirements.md
 
 Run Phase 01 against the input below:
@@ -55,7 +66,7 @@ Run Phase 01 against the input below:
 **Example — running Phase 03 with Developer persona:**
 ```
 @workspace
-Spec: .smiddy/specs/my-feature.md
+Spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 Persona: .smiddy/prompts/agents/developer.md
 Phase: .smiddy/prompts/phases/03-build.md
 
@@ -69,7 +80,7 @@ Implement the changes described in the spec and write tests for each acceptance 
 Copilot Chat supports attaching workspace files for context. Use the paperclip icon or `#file:` syntax to include relevant files without pasting their full contents:
 
 ```
-#file:.smiddy/specs/my-feature.md
+#file:.smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/context/stack.md
 #file:.smiddy/prompts/phases/02-design.md
 ```
@@ -86,7 +97,7 @@ For implementation, inline chat (`Ctrl+I` / `Cmd+I`) is effective for targeted e
 2. Select the relevant code or place the cursor at the insertion point.
 3. Open inline chat and describe the change in terms of the acceptance criterion:
    ```
-   Implement AC-2 from .smiddy/specs/my-feature.md: [paste the criterion]
+   Implement AC-2 from .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md: [paste the criterion]
    ```
 
 This keeps implementation focused on one criterion at a time.

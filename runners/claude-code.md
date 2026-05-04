@@ -8,19 +8,27 @@ This guide explains how to invoke the Smiddy pipeline using Claude Code. It cove
 
 - Claude Code installed and authenticated (`claude --version`)
 - `.smiddy/context/stack.md` filled in (run the stack discovery prompt below if starting from an existing project)
-- A spec file created under `.smiddy/specs/` (copy from `.smiddy/specs/_template.md`)
+- A spec file created under `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/` (copy from `.smiddy/specs/_template.md`)
 
 ---
 
-## Filling in the Stack (Existing Projects)
+## Discovering Context (Existing Projects)
 
-If you installed Smiddy into a project that already has code, run the stack discovery prompt once before starting any pipeline phase:
+If you installed Smiddy into a project that already has code, run these two discovery prompts once before starting any pipeline phase.
 
+**Stack discovery** — scans config files and dependencies:
 ```
 Read .smiddy/prompts/setup/stack-discovery.md and follow its instructions against this project.
 ```
 
-Claude Code will scan the project files and write `.smiddy/context/stack.md` for you. Review the output and fill in anything it could not determine automatically.
+**Architecture discovery** — scans source code for component structure and data flows:
+```
+Read .smiddy/prompts/setup/architecture-discovery.md and follow its instructions against this project.
+```
+
+Run stack discovery first, then architecture discovery. Claude Code will write `.smiddy/context/stack.md` and `.smiddy/context/architecture.md` for you. Review each output and fill in anything it could not determine automatically.
+
+> **New projects:** Skip architecture discovery. The Architect agent in Phase 02 will create `.smiddy/context/architecture.md` from scratch.
 
 ---
 
@@ -41,7 +49,7 @@ At the start of every session, Claude Code will read `.claude/CLAUDE.md` automat
 For each phase, paste the phase prompt into the Claude Code session, preceded by the active spec path. Example for Phase 01:
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 [paste contents of .smiddy/prompts/phases/01-requirements.md]
 ```
@@ -57,7 +65,7 @@ Phase 03 (Build) covers both implementation and tests. Claude Code will write pr
 To run multiple phases autonomously without manual advancement, provide the full workflow context upfront:
 
 ```
-Spec: .smiddy/specs/my-feature.md
+Spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 Context: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md
 
 Run all phases in sequence. Stop at each phase gate and confirm outputs before proceeding.
@@ -74,14 +82,14 @@ Claude Code will pause at each gate and report what was produced before continui
 Each phase prompt declares its required files in a `Requires:` block. Load only those files before running the phase — do not load all context files up front. Example for Phase 02:
 
 ```
-Read .smiddy/specs/architecture.md, .smiddy/context/stack.md, .smiddy/context/decisions.md, then run Phase 02 using spec: .smiddy/specs/my-feature.md
+Read .smiddy/context/architecture.md, .smiddy/context/stack.md, .smiddy/context/decisions.md, then run Phase 02 using spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 ```
 
 **Resuming mid-pipeline:**
 If a session was interrupted, tell Claude Code where you left off:
 
 ```
-We completed Phase 03. Resume from Phase 04 using spec: .smiddy/specs/my-feature.md
+We completed Phase 03. Resume from Phase 04 using spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 ```
 
 **Assigning an agent persona:**
@@ -114,7 +122,7 @@ Claude Code does not persist memory between sessions automatically. After Phase 
 
 | Symptom | Resolution |
 |---|---|
-| Claude Code ignores the spec | Paste the spec contents directly, or reference it with `Read file: .smiddy/specs/<name>.md` |
+| Claude Code ignores the spec | Paste the spec contents directly, or reference it with `Read file: .smiddy/specs/<yyyy-mm-dd>-<name>/<yyyy-mm-dd>-<name>.md` |
 | Phase advances without completing DoD | Add "Confirm each item in the Definition of Done checklist before proceeding" to your prompt |
 | Out-of-scope changes being made | Remind: "Only modify files listed in the spec's Affected Components section" |
 | ADRs not being written | Explicitly instruct: "Append any new ADRs to .smiddy/context/decisions.md now" |

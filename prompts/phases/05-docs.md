@@ -1,10 +1,10 @@
 # Phase 05 — Documentation
 
-**Input:** Approved implementation (Phase 04 review: Approved). Spec at `.smiddy/specs/<feature-name>.md`.
+**Input:** Approved implementation (Phase 04 review: Approved). Spec at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`.
 **Output:** Updated documentation. Spec status set to Done.
 
 **Requires:**
-- `.smiddy/specs/architecture.md` — to update if structure changed
+- `.smiddy/context/architecture.md` — to update if structure changed
 
 ---
 
@@ -38,7 +38,7 @@ Do not document what the code obviously does. Document the why, the contract, an
 ### Step 3 — Update architecture documentation
 
 If Phase 02 introduced new components, changed data flows, or added external dependencies:
-- Update `.smiddy/specs/architecture.md` to reflect the current state
+- Update `.smiddy/context/architecture.md` to reflect the current state
 - Do not leave architecture docs describing a state that no longer exists
 
 ### Step 4 — Update the changelog
@@ -55,7 +55,7 @@ If the feature changes how developers set up, run, or configure the project:
 
 ### Step 6 — Close the spec
 
-Update `.smiddy/specs/<feature-name>.md`:
+Update `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`:
 - Set status to **Done**
 - Fill in "Last updated" date
 - Confirm the "Definition of Done" checklist is complete

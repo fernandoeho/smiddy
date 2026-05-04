@@ -4,10 +4,16 @@ Ready-to-paste prompts for running each Smiddy phase in a Claude Code session. R
 
 ---
 
-## Setup — Stack Discovery (existing projects, run once)
+## Setup — Discovery (existing projects, run once)
 
+Stack discovery:
 ```
 Read .smiddy/prompts/setup/stack-discovery.md and follow its instructions against this project.
+```
+
+Architecture discovery (run after stack discovery):
+```
+Read .smiddy/prompts/setup/architecture-discovery.md and follow its instructions against this project.
 ```
 
 ---
@@ -15,7 +21,7 @@ Read .smiddy/prompts/setup/stack-discovery.md and follow its instructions agains
 ## Phase 01 — Requirements
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Read .smiddy/prompts/phases/01-requirements.md and follow its instructions.
 The feature request is: [describe what needs to be built]
@@ -26,7 +32,7 @@ The feature request is: [describe what needs to be built]
 ## Phase 02 — Design
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Read .smiddy/prompts/phases/02-design.md and follow its instructions.
 ```
@@ -34,7 +40,7 @@ Read .smiddy/prompts/phases/02-design.md and follow its instructions.
 With explicit persona loading:
 
 ```
-Adopt the Architect persona from .smiddy/prompts/agents/architect.md, then run Phase 02 using spec: .smiddy/specs/my-feature.md
+Adopt the Architect persona from .smiddy/prompts/agents/architect.md, then run Phase 02 using spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 ```
 
 ---
@@ -42,7 +48,7 @@ Adopt the Architect persona from .smiddy/prompts/agents/architect.md, then run P
 ## Phase 03 — Build
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Read .smiddy/prompts/phases/03-build.md and follow its instructions.
 ```
@@ -52,7 +58,7 @@ Read .smiddy/prompts/phases/03-build.md and follow its instructions.
 ## Phase 04 — Review
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Read .smiddy/prompts/phases/04-review.md and follow its instructions.
 ```
@@ -62,7 +68,7 @@ Read .smiddy/prompts/phases/04-review.md and follow its instructions.
 ## Phase 05 — Documentation
 
 ```
-Active spec: .smiddy/specs/my-feature.md
+Active spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Read .smiddy/prompts/phases/05-docs.md and follow its instructions.
 ```
@@ -72,7 +78,7 @@ Read .smiddy/prompts/phases/05-docs.md and follow its instructions.
 ## Full Autonomous Pipeline
 
 ```
-Spec: .smiddy/specs/my-feature.md
+Spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 
 Run all phases in sequence. For each phase, read the phase prompt and load the files listed in its Requires block before proceeding. Stop at each phase gate and confirm outputs before advancing.
 Do not advance past a phase until its Definition of Done is complete.
@@ -83,7 +89,7 @@ Do not advance past a phase until its Definition of Done is complete.
 ## Resume Mid-Pipeline
 
 ```
-We completed Phase 03. Resume from Phase 04 using spec: .smiddy/specs/my-feature.md
+We completed Phase 03. Resume from Phase 04 using spec: .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 ```
 
 ---

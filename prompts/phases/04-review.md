@@ -1,10 +1,10 @@
 # Phase 04 — Review
 
-**Input:** Implementation and tests from Phase 03. Spec at `.smiddy/specs/<feature-name>.md`.
+**Input:** Implementation and tests from Phase 03. Spec at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`.
 **Output:** A written review report. Either an approval or a list of blocking and non-blocking issues.
 
 **Requires:**
-- `.smiddy/specs/architecture.md` — architectural consistency check
+- `.smiddy/context/architecture.md` — architectural consistency check
 - `.smiddy/context/decisions.md` — standing decisions that must not be violated
 - `.smiddy/context/stack.md` — allowed technologies
 
@@ -20,7 +20,7 @@ Your job is to critically evaluate the work produced in Phase 03 against the spe
 
 Read in order:
 1. The active spec — particularly acceptance criteria, design decisions, and constraints
-2. `.smiddy/specs/architecture.md` — check for architectural consistency
+2. `.smiddy/context/architecture.md` — check for architectural consistency
 3. `.smiddy/context/decisions.md` — check that no standing decision was violated
 4. `.smiddy/context/stack.md` — check that only allowed technologies were used
 

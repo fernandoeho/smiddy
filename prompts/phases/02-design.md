@@ -1,10 +1,10 @@
 # Phase 02 — Design
 
-**Input:** Approved spec file at `.smiddy/specs/<feature-name>.md` (status: Draft or In Review).
+**Input:** Approved spec file at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` (status: Draft or In Review).
 **Output:** Completed design sections in the spec, plus any new ADR entries in `context/decisions.md`.
 
 **Requires:**
-- `.smiddy/specs/architecture.md` — existing system shape
+- `.smiddy/context/architecture.md` — existing system shape
 - `.smiddy/context/stack.md` — allowed tech stack
 - `.smiddy/context/decisions.md` — standing architectural decisions
 
@@ -19,8 +19,8 @@ Your job is to decide *how* the system will be built to satisfy the requirements
 ### Step 1 — Review inputs
 
 Read in order:
-1. The active spec at `.smiddy/specs/<feature-name>.md`
-2. `.smiddy/specs/architecture.md` — understand the existing system shape
+1. The active spec at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`
+2. `.smiddy/context/architecture.md` — understand the existing system shape
 3. `.smiddy/context/stack.md` — confirm the allowed tech stack
 4. `.smiddy/context/decisions.md` — check for standing decisions that constrain your design
 
