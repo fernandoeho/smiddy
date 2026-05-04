@@ -57,7 +57,7 @@ _Add one block per story._
 
 ## Proposed Design
 
-_Brief description. Link to the relevant ADR file in `.smiddy/decisions/` if a significant architectural choice was made._
+_Brief description. Link to the relevant ADR file in `.smiddy/governance/decisions/` if a significant architectural choice was made._
 
 ### Affected Components
 

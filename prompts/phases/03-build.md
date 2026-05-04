@@ -5,7 +5,7 @@
 
 **Requires:**
 - `.smiddy/context/stack.md` — languages, frameworks, and tooling conventions
-- `.smiddy/standards/index.yml` — project coding standards (if populated)
+- `.smiddy/governance/standards/index.yml` — project coding standards (if populated)
 
 ---
 
@@ -21,7 +21,7 @@ Read in order:
 1. The active spec, focusing on "Acceptance Criteria" and "Proposed Design"
 2. `.smiddy/context/stack.md` — confirm languages, frameworks, and tooling conventions
 3. The interface contracts defined in Phase 02
-4. `.smiddy/standards/index.yml` — if it contains entries, read the full file for any standards relevant to what you are about to write (e.g. if writing API endpoints, read any `api/` standards; if writing tests, read any `testing/` standards)
+4. `.smiddy/governance/standards/index.yml` — if it contains entries, read the full file for any standards relevant to what you are about to write (e.g. if writing API endpoints, read any `api/` standards; if writing tests, read any `testing/` standards)
 
 Do not implement anything not covered by the spec. If you discover scope that needs to be added, surface it as an open question rather than implementing speculatively.
 

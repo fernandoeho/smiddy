@@ -2,7 +2,7 @@
 
 **Purpose:** Extract your team's opinionated coding patterns from existing source code into documented, reusable standards.
 **When to run:** After `stack-discovery.md` and `architecture-discovery.md`. Run once per focus area; repeat for additional areas as needed.
-**Output:** Standard files in `.smiddy/standards/<category>/` and an updated `.smiddy/standards/index.yml`.
+**Output:** Standard files in `.smiddy/governance/standards/<category>/` and an updated `.smiddy/governance/standards/index.yml`.
 
 > **What this is not:** This prompt does not rediscover the tech stack (tools, versions) or system architecture (components, data flows). It discovers *how* your team writes code within that stack — patterns that a new developer or AI agent would not know without being told.
 
@@ -14,7 +14,7 @@ Your job is to read existing source code and surface patterns that are opinionat
 
 ### Step 1 — Check existing standards
 
-Read `.smiddy/standards/index.yml` to see what has already been documented. This prevents duplicating standards already captured.
+Read `.smiddy/governance/standards/index.yml` to see what has already been documented. This prevents duplicating standards already captured.
 
 If the file does not exist or is empty, there are no existing standards yet.
 
@@ -99,12 +99,12 @@ Show the draft to the user and ask for approval before writing the file.
 
 ### Step 7 — Write the file and update the index
 
-Once the user approves, write the standard to `.smiddy/standards/<category>/<standard-name>.md`.
+Once the user approves, write the standard to `.smiddy/governance/standards/<category>/<standard-name>.md`.
 
 - Use lowercase, hyphenated names for both category and file (e.g. `api/response-envelope.md`, `testing/naming.md`)
 - If a related standard file already exists in the category, check whether to append rather than create a new file
 
-Then add an entry to `.smiddy/standards/index.yml`:
+Then add an entry to `.smiddy/governance/standards/index.yml`:
 
 ```yaml
 <category>:
@@ -175,5 +175,5 @@ When an error occurs in our application, we have established a consistent patter
 - [ ] At least 3 standards written for the chosen area
 - [ ] Each standard has a code example, rules list, and a Why section
 - [ ] No framework-default or obvious patterns documented — only opinionated, tribal, or non-obvious ones
-- [ ] All new standards added to `.smiddy/standards/index.yml`
+- [ ] All new standards added to `.smiddy/governance/standards/index.yml`
 - [ ] Index entries are alphabetically ordered within each category

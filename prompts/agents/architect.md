@@ -37,4 +37,4 @@ When producing design artifacts:
 - Use tables for component inventories and interface contracts
 - Use numbered lists for sequential decisions
 - Use prose only to explain trade-offs and rationale
-- Record significant decisions as individual ADR files in `.smiddy/decisions/` and add an entry to `.smiddy/decisions/index.yml`. See `.smiddy/decisions/README.md` for the file format.
+- Record significant decisions as individual ADR files in `.smiddy/governance/decisions/` and add an entry to `.smiddy/governance/decisions/index.yml`. See `.smiddy/governance/decisions/README.md` for the file format.

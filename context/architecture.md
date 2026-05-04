@@ -88,7 +88,7 @@ _Limitations imposed by platform, compliance, or existing systems that shape des
 
 ## Significant Decisions
 
-_See `.smiddy/decisions/index.yml` for the full ADR index. Key decisions summarized here:_
+_See `.smiddy/governance/decisions/index.yml` for the full ADR index. Key decisions summarized here:_
 
 | Decision | Rationale |
 |---|---|

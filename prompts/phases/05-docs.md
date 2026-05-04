@@ -5,7 +5,7 @@
 
 **Requires:**
 - `.smiddy/context/architecture.md` — to update if structure changed
-- `.smiddy/standards/index.yml` — to update if new standards were flagged in Phase 04
+- `.smiddy/governance/standards/index.yml` — to update if new standards were flagged in Phase 04
 
 ---
 
@@ -62,7 +62,7 @@ If candidates were listed:
 
 For each candidate, draft a standard file following the format in `prompts/setup/standards-discovery.md` (Name, Pattern, Rules, Why, Exceptions). Use the code introduced in this feature as the code example — it is the authoritative implementation of the pattern.
 
-Write each standard to `.smiddy/standards/<category>/<standard-name>.md` and add an entry to `.smiddy/standards/index.yml`:
+Write each standard to `.smiddy/governance/standards/<category>/<standard-name>.md` and add an entry to `.smiddy/governance/standards/index.yml`:
 
 ```yaml
 <category>:
@@ -90,6 +90,6 @@ Update `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md
 - [ ] Architecture docs updated if structure changed
 - [ ] Changelog entry added for all user-visible changes
 - [ ] README updated if setup or usage changed
-- [ ] Flagged standards written to `.smiddy/standards/` and index updated (or "None" confirmed)
+- [ ] Flagged standards written to `.smiddy/governance/standards/` and index updated (or "None" confirmed)
 - [ ] Spec status set to Done
 - [ ] No documentation describes a state that no longer exists

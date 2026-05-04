@@ -69,7 +69,7 @@ Run Phase 01 against the following feature request:
 #file:.smiddy/prompts/agents/architect.md
 #file:.smiddy/context/architecture.md
 #file:.smiddy/context/stack.md
-#file:.smiddy/decisions/index.yml
+#file:.smiddy/governance/decisions/index.yml
 
 Run Phase 02. Follow the instructions in the phase prompt.
 ```
@@ -97,7 +97,7 @@ Implement AC-2 from .smiddy/specs/yyyy-mm-dd-my-feature/yyyy-mm-dd-my-feature.md
 #file:.smiddy/prompts/phases/04-review.md
 #file:.smiddy/prompts/agents/reviewer.md
 #file:.smiddy/context/architecture.md
-#file:.smiddy/decisions/index.yml
+#file:.smiddy/governance/decisions/index.yml
 #file:.smiddy/context/stack.md
 
 Run Phase 04. Evaluate the implementation against the spec and report any blocking issues.
@@ -123,7 +123,7 @@ Run Phase 05. Update documentation for all changes made in this pipeline run.
 #file:.smiddy/prompts/phases/04-review.md
 #file:.smiddy/prompts/agents/reviewer.md
 #file:.smiddy/context/architecture.md
-#file:.smiddy/decisions/index.yml
+#file:.smiddy/governance/decisions/index.yml
 #file:.smiddy/context/stack.md
 
 We completed Phase 03. Resume from Phase 04.
@@ -145,10 +145,10 @@ Implement only what is required by the acceptance criteria, nothing more.
 
 Persist architecture decisions after Phase 02:
 ```
-List all ADRs produced in this session so I can write them to .smiddy/decisions/ and update .smiddy/decisions/index.yml
+List all ADRs produced in this session so I can write them to .smiddy/governance/decisions/ and update .smiddy/governance/decisions/index.yml
 ```
 
-> Note: Copilot does not write files autonomously. Apply its suggestions using the VS Code diff editor or inline chat, then manually create ADR files in `.smiddy/decisions/` and update `.smiddy/decisions/index.yml`.
+> Note: Copilot does not write files autonomously. Apply its suggestions using the VS Code diff editor or inline chat, then manually create ADR files in `.smiddy/governance/decisions/` and update `.smiddy/governance/decisions/index.yml`.
 
 ---
 

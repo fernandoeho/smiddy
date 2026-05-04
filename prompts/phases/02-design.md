@@ -6,8 +6,8 @@
 **Requires:**
 - `.smiddy/context/architecture.md` — existing system shape
 - `.smiddy/context/stack.md` — allowed tech stack
-- `.smiddy/decisions/index.yml` — index of standing architectural decisions
-- `.smiddy/standards/index.yml` — project coding standards (if populated)
+- `.smiddy/governance/decisions/index.yml` — index of standing architectural decisions
+- `.smiddy/governance/standards/index.yml` — project coding standards (if populated)
 
 ---
 
@@ -23,8 +23,8 @@ Read in order:
 1. The active spec at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md`
 2. `.smiddy/context/architecture.md` — understand the existing system shape
 3. `.smiddy/context/stack.md` — confirm the allowed tech stack
-4. `.smiddy/decisions/index.yml` — scan area tags to identify ADRs relevant to the components being modified; read only those ADR files from `.smiddy/decisions/`
-5. `.smiddy/standards/index.yml` — if it contains entries, identify and read standards relevant to the components being modified
+4. `.smiddy/governance/decisions/index.yml` — scan area tags to identify ADRs relevant to the components being modified; read only those ADR files from `.smiddy/governance/decisions/`
+5. `.smiddy/governance/standards/index.yml` — if it contains entries, identify and read standards relevant to the components being modified
 
 Do not propose designs that contradict standing decisions unless you explicitly surface a new ADR. Do not propose interface contracts that contradict a documented standard without flagging it.
 
@@ -55,8 +55,8 @@ For each significant design decision, briefly state:
 - Why the chosen option wins
 
 If a decision is architecturally significant (affects multiple components, is hard to reverse, or has compliance implications):
-1. Create `.smiddy/decisions/ADR-NNN-short-title.md` using the format in `.smiddy/decisions/README.md`
-2. Add an entry to `.smiddy/decisions/index.yml` with appropriate area tags so future phases can find it
+1. Create `.smiddy/governance/decisions/ADR-NNN-short-title.md` using the format in `.smiddy/governance/decisions/README.md`
+2. Add an entry to `.smiddy/governance/decisions/index.yml` with appropriate area tags so future phases can find it
 
 ### Step 6 — Update the spec
 
@@ -74,5 +74,5 @@ If any requirement is under-specified for design purposes, add it to the spec's 
 - [ ] All interface contracts defined explicitly
 - [ ] Data model changes documented with migration plan
 - [ ] Design alternatives evaluated for significant decisions
-- [ ] New ADR files written in `.smiddy/decisions/` and index updated
+- [ ] New ADR files written in `.smiddy/governance/decisions/` and index updated
 - [ ] Spec updated and status set to In Review
