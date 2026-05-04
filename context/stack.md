@@ -58,4 +58,4 @@
 
 ## Conventions
 
-Coding conventions (naming, file structure, error handling patterns, etc.) are documented as standards in `.smiddy/standards/`. Run `.smiddy/prompts/setup/standards-discovery.md` to extract them from your codebase.
+Coding conventions (naming, file structure, error handling patterns, etc.) are documented as standards in `.smiddy/governance/standards/`. Run `.smiddy/prompts/setup/standards-discovery.md` to extract them from your codebase.

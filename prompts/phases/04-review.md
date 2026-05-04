@@ -5,9 +5,9 @@
 
 **Requires:**
 - `.smiddy/context/architecture.md` — architectural consistency check
-- `.smiddy/decisions/index.yml` — index of standing architectural decisions
+- `.smiddy/governance/decisions/index.yml` — index of standing architectural decisions
 - `.smiddy/context/stack.md` — allowed technologies
-- `.smiddy/standards/index.yml` — existing standards to check compliance against (if populated)
+- `.smiddy/governance/standards/index.yml` — existing standards to check compliance against (if populated)
 
 ---
 
@@ -22,9 +22,9 @@ Your job is to critically evaluate the work produced in Phase 03 against the spe
 Read in order:
 1. The active spec — particularly acceptance criteria, design decisions, and constraints
 2. `.smiddy/context/architecture.md` — check for architectural consistency
-3. `.smiddy/decisions/index.yml` — scan area tags to identify ADRs relevant to what changed; read only those ADR files from `.smiddy/decisions/`
+3. `.smiddy/governance/decisions/index.yml` — scan area tags to identify ADRs relevant to what changed; read only those ADR files from `.smiddy/governance/decisions/`
 4. `.smiddy/context/stack.md` — check that only allowed technologies were used
-5. `.smiddy/standards/index.yml` — if populated, identify and read standards relevant to what was changed
+5. `.smiddy/governance/standards/index.yml` — if populated, identify and read standards relevant to what was changed
 
 ### Step 2 — Review correctness
 
@@ -70,7 +70,7 @@ While reviewing the code, watch for patterns introduced or confirmed by this fea
 - **Non-obvious** — something a future agent or new developer would not know without being told
 - **Consistent** — already applied correctly across the new code, not a one-off
 
-Do not flag patterns that are already in `.smiddy/standards/index.yml`, are standard framework behavior, or are obvious from the tooling.
+Do not flag patterns that are already in `.smiddy/governance/standards/index.yml`, are standard framework behavior, or are obvious from the tooling.
 
 For each candidate, note:
 - A short name

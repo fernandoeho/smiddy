@@ -29,7 +29,7 @@ Existing files are skipped by default. Use `--force` to overwrite.
 
 ## Quick Start
 
-1. **Fill in context** — edit `.smiddy/context/product.md` and `.smiddy/context/stack.md`. Architectural decisions live as individual files in `.smiddy/decisions/`.
+1. **Fill in context** — edit `.smiddy/context/product.md` and `.smiddy/context/stack.md`. Architectural decisions live as individual files in `.smiddy/governance/decisions/`.
 2. **Discover existing context** *(existing projects only)* — run `.smiddy/prompts/setup/stack-discovery.md` to auto-fill `stack.md`, then `.smiddy/prompts/setup/architecture-discovery.md` to auto-fill `architecture.md`. For new projects, skip this — the Architect agent (Phase 02) will create `architecture.md`.
 3. **Write a spec** — give your raw requirement to the Product Owner agent (Phase 01); it will ask clarifying questions and generate `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` for you.
 4. **Read the invocation guide** — open `.smiddy/docs/claude-code.md` or `.smiddy/docs/copilot.md` for step-by-step instructions and examples.

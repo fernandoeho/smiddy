@@ -11,7 +11,7 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 - Only use context files listed in the active phase prompt's `Requires:` block. Do not load all context files up front.
 - Before writing any code, confirm the active spec exists under `.smiddy/specs/` and is complete.
 - Do not skip phases. If a required output from a prior phase is missing, stop and ask.
-- Respect architectural decisions indexed in `.smiddy/decisions/index.yml` and stored as individual files in `.smiddy/decisions/`.
+- Respect architectural decisions indexed in `.smiddy/governance/decisions/index.yml` and stored as individual files in `.smiddy/governance/decisions/`.
 
 ## Phase Execution
 
@@ -59,7 +59,7 @@ Shell commands are available. Prefer them for:
 
 ## Memory
 
-Persist architectural decisions by creating individual ADR files in `.smiddy/decisions/` and updating `.smiddy/decisions/index.yml` — not by relying on conversation history.
+Persist architectural decisions by creating individual ADR files in `.smiddy/governance/decisions/` and updating `.smiddy/governance/decisions/index.yml` — not by relying on conversation history.
 
 ## Documentation
 

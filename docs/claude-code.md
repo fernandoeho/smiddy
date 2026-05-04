@@ -121,7 +121,7 @@ Only modify files listed in the Affected Components section of the spec.
 
 Persist architecture decisions after Phase 02:
 ```
-Write any new ADRs to .smiddy/decisions/ and update .smiddy/decisions/index.yml now.
+Write any new ADRs to .smiddy/governance/decisions/ and update .smiddy/governance/decisions/index.yml now.
 ```
 
 ---
@@ -137,7 +137,7 @@ Claude Code has shell access and uses it during:
 
 ## Persisting Decisions
 
-Claude Code does not persist memory between sessions. After Phase 02, ensure ADRs are written to `.smiddy/decisions/` and the index is updated. Load `.smiddy/decisions/index.yml` explicitly at the start of new sessions so prior decisions are respected.
+Claude Code does not persist memory between sessions. After Phase 02, ensure ADRs are written to `.smiddy/governance/decisions/` and the index is updated. Load `.smiddy/governance/decisions/index.yml` explicitly at the start of new sessions so prior decisions are respected.
 
 ---
 
@@ -148,4 +148,4 @@ Claude Code does not persist memory between sessions. After Phase 02, ensure ADR
 | Claude Code ignores the spec | Paste the spec contents directly, or reference it with `Read file: .smiddy/specs/<name>/<name>.md` |
 | Phase advances without completing DoD | Add "Confirm each item in the Definition of Done checklist before proceeding" to your prompt |
 | Out-of-scope changes being made | Remind: "Only modify files listed in the spec's Affected Components section" |
-| ADRs not being written | Explicitly instruct: "Write any new ADRs to .smiddy/decisions/ and update .smiddy/decisions/index.yml now" |
+| ADRs not being written | Explicitly instruct: "Write any new ADRs to .smiddy/governance/decisions/ and update .smiddy/governance/decisions/index.yml now" |

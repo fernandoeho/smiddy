@@ -89,7 +89,7 @@ For each, note its purpose and the auth method used (API key, OAuth, service acc
 
 ### Step 7 — Note conventions for standards discovery
 
-Do not write conventions to `stack.md`. Coding conventions (naming, file structure, error handling, response shapes, etc.) belong in `.smiddy/standards/` where they are indexed and selectively loaded per phase.
+Do not write conventions to `stack.md`. Coding conventions (naming, file structure, error handling, response shapes, etc.) belong in `.smiddy/governance/standards/` where they are indexed and selectively loaded per phase.
 
 While scanning, note any strong conventions you observe — branch naming patterns, commit format, file structure style, error handling approach. Surface these to the user at the end as a short list so they know which areas to target first when running `standards-discovery.md`.
 
