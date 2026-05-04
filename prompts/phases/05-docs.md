@@ -13,7 +13,9 @@
 
 Before writing any documentation, run the gate at `.smiddy/governance/gates/review-to-docs.md` against the active spec and the Phase 04 review report.
 
-If the gate fails, stop immediately. If the approval decision was `Changes required`, route back to Phase 03. Report each failing item to the user and do not proceed until they are resolved.
+If the gate **passes**: update `.pipeline-state.yml` — set `phases.docs.status` to `in_progress`, `started_at` to today's date, `phases.review.gate_passed` to `true`, and `pipeline.current_phase_name` to `docs`.
+
+If the gate **fails**: update `.pipeline-state.yml` — set `phases.review.status` to `blocked` and `phases.review.gate_passed` to `false`. If the approval decision was `Changes required`, also reset `phases.build.status` to `in_progress` and `pipeline.current_phase` to `3`. Report each failing item to the user and do not proceed until they are resolved.
 
 ---
 
@@ -101,3 +103,5 @@ Update `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md
 - [ ] Flagged standards written to `.smiddy/governance/standards/` and index updated (or "None" confirmed)
 - [ ] Spec status set to Done
 - [ ] No documentation describes a state that no longer exists
+
+**State update:** When all items above are checked, update `.pipeline-state.yml` — set `phases.docs.status` to `done`, `completed_at` to today's date, `pipeline.current_phase` to `5`, and `current_phase_name` to `docs`. The pipeline for this spec is now complete.

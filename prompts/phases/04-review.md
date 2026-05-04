@@ -15,7 +15,9 @@
 
 Before reviewing any code, run the gate at `.smiddy/governance/gates/build-to-review.md` against the active spec.
 
-If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
+If the gate **passes**: update `.pipeline-state.yml` — set `phases.review.status` to `in_progress`, `started_at` to today's date, `phases.build.gate_passed` to `true`, and `pipeline.current_phase_name` to `review`.
+
+If the gate **fails**: update `.pipeline-state.yml` — set `phases.build.status` to `blocked` and `phases.build.gate_passed` to `false`. Report each failing item to the user and do not proceed until they are resolved.
 
 ---
 
@@ -129,3 +131,5 @@ Structure your report as:
 - [ ] Review report written with explicit approval decision
 - [ ] All blocking issues described with enough detail to act on
 - [ ] Spec status updated to Approved (if no blockers) or left In Review (if blockers exist)
+
+**State update:** When all items above are checked, update `.pipeline-state.yml` — set `phases.review.status` to `done`, `completed_at` to today's date, and advance `pipeline.current_phase` to `5` and `current_phase_name` to `docs`. If the approval decision was `Changes required`, instead set `phases.review.status` to `blocked` and reset `pipeline.current_phase` to `3` and `current_phase_name` to `build`.
