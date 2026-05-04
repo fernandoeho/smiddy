@@ -91,7 +91,7 @@ echo "Installing Smiddy into: $TARGET_DIR"
 echo
 
 echo "── Pipeline files ───────────────────────────────────────────"
-for dir in context specs prompts docs; do
+for dir in context specs prompts docs standards decisions; do
   copy_dir "$dir" "$TARGET_DIR/.smiddy"
 done
 
@@ -109,10 +109,12 @@ fi
 
 echo
 echo "Done. Next steps:"
-echo "  1. Run the stack discovery prompt to auto-fill .smiddy/context/stack.md:"
-echo "     Claude Code: ask it to read .smiddy/prompts/setup/stack-discovery.md"
-echo "     Copilot:     attach .smiddy/prompts/setup/stack-discovery.md in chat with @workspace"
-echo "  2. Edit .smiddy/context/decisions.md with any standing architectural decisions."
+echo "  1. Fill in the context files (run once for existing projects):"
+echo "     a. Stack:         read .smiddy/prompts/setup/stack-discovery.md"
+echo "     b. Architecture:  read .smiddy/prompts/setup/architecture-discovery.md"
+echo "     c. Standards:     read .smiddy/prompts/setup/standards-discovery.md"
+echo "     (For new projects, skip (b) and (c) — the pipeline fills these in as you build.)"
+echo "  2. Edit .smiddy/decisions/index.yml and add any standing architectural decisions as ADR files in .smiddy/decisions/."
 echo "  3. Create .smiddy/specs/<yyyy-mm-dd>-<feature>/ and copy .smiddy/specs/_template.md into it as <yyyy-mm-dd>-<feature>.md."
 echo "  4. Run the phases in order. See .smiddy/docs/ for invocation patterns."
 echo

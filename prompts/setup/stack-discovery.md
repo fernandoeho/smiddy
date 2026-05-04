@@ -87,14 +87,11 @@ Look in `.env.example`, README, and CI configs for references to third-party ser
 
 For each, note its purpose and the auth method used (API key, OAuth, service account, etc.) if determinable.
 
-### Step 7 — Scan for conventions
+### Step 7 — Note conventions for standards discovery
 
-Look for evidence of team conventions:
-- Branch naming patterns in CI config or CONTRIBUTING.md
-- Commit format hints in `.commitlintrc*`, CONTRIBUTING.md, or recent git log
-- File structure patterns (feature-based vs. layer-based folders)
-- Naming conventions visible in existing source files
-- Error handling patterns in existing code
+Do not write conventions to `stack.md`. Coding conventions (naming, file structure, error handling, response shapes, etc.) belong in `.smiddy/standards/` where they are indexed and selectively loaded per phase.
+
+While scanning, note any strong conventions you observe — branch naming patterns, commit format, file structure style, error handling approach. Surface these to the user at the end as a short list so they know which areas to target first when running `standards-discovery.md`.
 
 ### Step 8 — Fill in the stack file
 
@@ -105,9 +102,13 @@ Write the discovered information into `.smiddy/context/stack.md`. Follow these r
 - Add a comment in italics below any section where important details were ambiguous.
 - Do not remove table rows — leave them blank if the concern does not apply.
 
-### Step 9 — Surface what you could not determine
+### Step 9 — Surface what you could not determine and suggest standards areas
 
-After writing the file, list any fields you left blank that are likely relevant to the project, and explain what information would be needed to fill them. Keep this list short — only items that will matter during pipeline phases.
+After writing the file:
+
+1. List any fields you left blank that are likely relevant to the project, and explain what information would be needed to fill them. Keep this list short — only items that will matter during pipeline phases.
+
+2. List the conventions you noted in Step 7 as suggested focus areas for `standards-discovery.md`. For example: "Observed consistent error handling patterns in `src/` — good candidate for a standard."
 
 ---
 
