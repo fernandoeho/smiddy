@@ -2,7 +2,7 @@
 
 This file is the authoritative log of significant architectural decisions. Each entry is an ADR (Architecture Decision Record).
 
-The AI agent reads this file before Phase 02 (Design) and Phase 05 (Review) to avoid proposing changes that contradict standing decisions.
+The AI agent reads this file before Phase 02 (Design) and Phase 04 (Review) to avoid proposing changes that contradict standing decisions.
 
 ---
 

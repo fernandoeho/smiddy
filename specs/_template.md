@@ -4,7 +4,7 @@
 **Author:** [name]
 **Created:** [YYYY-MM-DD]
 **Last updated:** [YYYY-MM-DD]
-**Workflow:** [new-feature | bug-fix | release]
+**Workflow:** [new-feature | bug-fix]
 
 ---
 
