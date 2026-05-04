@@ -2,7 +2,7 @@
 
 **Tool-agnostic SDLC autonomous pipeline framework.**
 
-Smiddy provides a structured, phase-driven pipeline for software development that runs on any AI coding assistant. All prompts and workflows are runtime-neutral — the runner layer is the only thing that changes when you switch tools.
+Smiddy provides a structured, phase-driven pipeline for software development that runs on any AI coding assistant. All prompts are tool-agnostic — only the adapter layer changes when you switch tools.
 
 ---
 
@@ -32,7 +32,7 @@ Existing files are skipped by default. Use `--force` to overwrite.
 1. **Fill in context** — edit `.smiddy/context/product.md`, `.smiddy/context/stack.md`, `.smiddy/context/decisions.md`, and `.smiddy/context/glossary.md`.
 2. **Discover existing context** *(existing projects only)* — run `.smiddy/prompts/setup/stack-discovery.md` to auto-fill `stack.md`, then `.smiddy/prompts/setup/architecture-discovery.md` to auto-fill `architecture.md`. For new projects, skip this — the Architect agent (Phase 02) will create `architecture.md`.
 3. **Write a spec** — give your raw requirement to the Product Owner agent (Phase 01); it will ask clarifying questions and generate `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` for you.
-4. **Pick a runner** — open `.smiddy/runners/claude-code.md` or `.smiddy/runners/copilot.md` for invocation instructions.
+4. **Read the invocation guide** — open `.smiddy/docs/claude-code.md` or `.smiddy/docs/copilot.md` for step-by-step instructions and examples.
 5. **Run the pipeline** — follow the phase sequence, feeding each phase prompt to your chosen AI tool.
 
 ---
@@ -65,4 +65,4 @@ You can use both simultaneously — Claude Code for pipeline orchestration, Copi
 
 ## Contributing
 
-Prompts live in `.smiddy/prompts/`. Keep them tool-agnostic — no tool-specific syntax. Runner-specific instructions belong exclusively in `.smiddy/runners/`.
+Prompts live in `.smiddy/prompts/`. Keep them tool-agnostic — no tool-specific syntax. Tool-specific invocation guides belong in `.smiddy/docs/`; adapter behavior files belong in `.claude/CLAUDE.md` or `.copilot/instructions.md`.
