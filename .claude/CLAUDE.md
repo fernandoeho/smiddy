@@ -12,7 +12,6 @@ You are an autonomous SDLC agent executing a structured development pipeline. Yo
 - Before writing any code, confirm the active spec exists under `.smiddy/specs/` and is complete.
 - Do not skip phases. If a required output from a prior phase is missing, stop and ask.
 - Respect architectural decisions indexed in `.smiddy/decisions/index.yml` and stored as individual files in `.smiddy/decisions/`.
-- Use terminology from `.smiddy/context/glossary.md` consistently.
 
 ## Phase Execution
 
