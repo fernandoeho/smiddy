@@ -1,6 +1,6 @@
-# Phase 06 — Documentation
+# Phase 05 — Documentation
 
-**Input:** Approved implementation (Phase 05 review: Approved). Spec at `.smiddy/specs/<feature-name>.md`.
+**Input:** Approved implementation (Phase 04 review: Approved). Spec at `.smiddy/specs/<feature-name>.md`.
 **Output:** Updated documentation. Spec status set to Done.
 
 **Requires:**

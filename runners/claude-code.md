@@ -1,6 +1,6 @@
 # Runner: Claude Code
 
-This guide explains how to invoke the Smiddy pipeline using Claude Code. It covers only tool-specific invocation — all pipeline logic lives in the phase prompts and workflows.
+This guide explains how to invoke the Smiddy pipeline using Claude Code. It covers only tool-specific invocation — all pipeline logic lives in the phase prompts.
 
 ---
 
@@ -48,6 +48,8 @@ Active spec: .smiddy/specs/my-feature.md
 
 Claude Code will execute the phase, produce outputs, and stop at the Definition of Done checklist for your confirmation before advancing.
 
+Phase 03 (Build) covers both implementation and tests. Claude Code will write production code, write the test suite, run the full suite, and confirm all tests pass before completing the phase.
+
 ---
 
 ## Running a Full Autonomous Pipeline
@@ -55,7 +57,6 @@ Claude Code will execute the phase, produce outputs, and stop at the Definition 
 To run multiple phases autonomously without manual advancement, provide the full workflow context upfront:
 
 ```
-Workflow: .smiddy/workflows/new-feature.md
 Spec: .smiddy/specs/my-feature.md
 Context: .smiddy/context/stack.md, .smiddy/context/decisions.md, .smiddy/context/glossary.md
 
@@ -80,7 +81,7 @@ Read .smiddy/specs/architecture.md, .smiddy/context/stack.md, .smiddy/context/de
 If a session was interrupted, tell Claude Code where you left off:
 
 ```
-We completed Phase 03. Tests are not yet written. Resume from Phase 04 using spec: .smiddy/specs/my-feature.md
+We completed Phase 03. Resume from Phase 04 using spec: .smiddy/specs/my-feature.md
 ```
 
 **Assigning an agent persona:**
@@ -96,8 +97,8 @@ Adopt the Architect persona from .smiddy/prompts/agents/architect.md and run Pha
 
 Claude Code has shell access and will use it during:
 - Phase 04: running the test suite
-- Phase 05: running type checks and linting
-- Phase 06: building documentation artifacts
+- Phase 04: running type checks and linting
+- Phase 05: building documentation artifacts
 
 If a shell command requires confirmation, Claude Code will ask before running it.
 

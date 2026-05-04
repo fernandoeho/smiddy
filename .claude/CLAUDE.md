@@ -18,10 +18,9 @@ Run phases in order unless the active workflow explicitly permits skipping:
 
 1. `.smiddy/prompts/phases/01-requirements.md`
 2. `.smiddy/prompts/phases/02-design.md`
-3. `.smiddy/prompts/phases/03-implementation.md`
-4. `.smiddy/prompts/phases/04-tests.md`
-5. `.smiddy/prompts/phases/05-review.md`
-6. `.smiddy/prompts/phases/06-docs.md`
+3. `.smiddy/prompts/phases/03-build.md`
+4. `.smiddy/prompts/phases/04-review.md`
+5. `.smiddy/prompts/phases/05-docs.md`
 
 At the end of each phase, write a brief summary of outputs produced before proceeding.
 
@@ -42,9 +41,9 @@ When a phase prompt references an agent role, load the corresponding persona:
 ## Tool Use
 
 Shell commands are available. Prefer them for:
-- Running the test suite before declaring phase 04 complete.
-- Checking types or linting before declaring phase 05 complete.
-- Building/generating docs artifacts in phase 06.
+- Running the test suite before declaring phase 03 complete.
+- Checking types or linting before declaring phase 04 complete.
+- Building/generating docs artifacts in phase 05.
 
 ## Memory
 

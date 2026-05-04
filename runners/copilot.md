@@ -1,6 +1,6 @@
 # Runner: GitHub Copilot
 
-This guide explains how to invoke the Smiddy pipeline using GitHub Copilot in VS Code. It covers only tool-specific invocation — all pipeline logic lives in the phase prompts and workflows.
+This guide explains how to invoke the Smiddy pipeline using GitHub Copilot in VS Code. It covers only tool-specific invocation — all pipeline logic lives in the phase prompts.
 
 ---
 
@@ -57,9 +57,9 @@ Run Phase 01 against the input below:
 @workspace
 Spec: .smiddy/specs/my-feature.md
 Persona: .smiddy/prompts/agents/developer.md
-Phase: .smiddy/prompts/phases/03-implementation.md
+Phase: .smiddy/prompts/phases/03-build.md
 
-Implement the changes described in the spec.
+Implement the changes described in the spec and write tests for each acceptance criterion.
 ```
 
 ---
@@ -97,8 +97,8 @@ This keeps implementation focused on one criterion at a time.
 
 Unlike Claude Code, Copilot does not advance phases autonomously. You drive the workflow manually:
 
-1. Open `.smiddy/workflows/new-feature.md` (or the relevant workflow) as a checklist.
-2. Work through each phase checklist item in Copilot Chat.
+1. Work through each phase in Copilot Chat, following the phase prompts under `.smiddy/prompts/phases/`.
+2. Phase 03 (Build) covers both implementation and tests — complete both before moving on.
 3. Check off items as they are completed.
 4. Move to the next phase only when the current phase's Definition of Done is fully satisfied.
 
@@ -125,4 +125,4 @@ After Phase 02, manually copy any ADRs Copilot generates into `.smiddy/context/d
 
 - Use `@workspace` in Copilot Chat to give it access to the full project structure.
 - Attach `.smiddy/context/decisions.md` to any chat involving architecture to prevent contradicting standing decisions.
-- For review (Phase 05), open the changed files side-by-side with the spec and ask Copilot to evaluate each acceptance criterion one at a time.
+- For review (Phase 04), open the changed files side-by-side with the spec and ask Copilot to evaluate each acceptance criterion one at a time.

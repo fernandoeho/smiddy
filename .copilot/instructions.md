@@ -22,10 +22,9 @@ When the developer opens or references a phase prompt from `.smiddy/prompts/phas
 |---|---|
 | `01-requirements.md` | User stories, acceptance criteria, constraints list |
 | `02-design.md` | Component diagram, interface contracts, data models |
-| `03-implementation.md` | Production code only, no tests |
-| `04-tests.md` | Test files only, no production code changes |
-| `05-review.md` | Review comments, issue list, approval decision |
-| `06-docs.md` | Docstrings, README sections, changelog entry |
+| `03-build.md` | Production code and tests |
+| `04-review.md` | Review comments, issue list, approval decision |
+| `05-docs.md` | Docstrings, README sections, changelog entry |
 
 ## Agent Personas
 
@@ -45,4 +44,4 @@ When asked to adopt a specific role, load the relevant persona file before respo
 
 ## Workflow Integration
 
-Developers drive the workflow manually in VS Code. Use the workflow files in `.smiddy/workflows/` as checklists. Reference the relevant runner guide at `.smiddy/runners/copilot.md` for step-by-step invocation patterns.
+Developers drive the pipeline manually in VS Code. Reference the runner guide at `.smiddy/runners/copilot.md` for step-by-step invocation patterns.

@@ -48,16 +48,16 @@ Run Phase 02. Follow the instructions in the phase prompt.
 
 ---
 
-## Phase 03 — Implementation
+## Phase 03 — Build
 
 ```
 @workspace
 #file:.smiddy/specs/my-feature.md
-#file:.smiddy/prompts/phases/03-implementation.md
+#file:.smiddy/prompts/phases/03-build.md
 #file:.smiddy/prompts/agents/developer.md
 #file:.smiddy/context/stack.md
 
-Run Phase 03. Implement only what is required by the acceptance criteria.
+Run Phase 03. Implement all acceptance criteria and write tests for each one.
 ```
 
 For targeted inline edits, use inline chat (`Cmd+I` / `Ctrl+I`) on the relevant file:
@@ -68,45 +68,31 @@ Implement AC-2 from .smiddy/specs/my-feature.md: [paste the criterion]
 
 ---
 
-## Phase 04 — Tests
+## Phase 04 — Review
 
 ```
 @workspace
 #file:.smiddy/specs/my-feature.md
-#file:.smiddy/prompts/phases/04-tests.md
-#file:.smiddy/prompts/agents/developer.md
-#file:.smiddy/context/stack.md
-
-Run Phase 04. Write tests for every acceptance criterion in the spec.
-```
-
----
-
-## Phase 05 — Review
-
-```
-@workspace
-#file:.smiddy/specs/my-feature.md
-#file:.smiddy/prompts/phases/05-review.md
+#file:.smiddy/prompts/phases/04-review.md
 #file:.smiddy/prompts/agents/reviewer.md
 #file:.smiddy/specs/architecture.md
 #file:.smiddy/context/decisions.md
 #file:.smiddy/context/stack.md
 
-Run Phase 05. Evaluate the implementation against the spec and report any blocking issues.
+Run Phase 04. Evaluate the implementation against the spec and report any blocking issues.
 ```
 
 ---
 
-## Phase 06 — Documentation
+## Phase 05 — Documentation
 
 ```
 @workspace
 #file:.smiddy/specs/my-feature.md
-#file:.smiddy/prompts/phases/06-docs.md
+#file:.smiddy/prompts/phases/05-docs.md
 #file:.smiddy/specs/architecture.md
 
-Run Phase 06. Update documentation for all changes made in this pipeline run.
+Run Phase 05. Update documentation for all changes made in this pipeline run.
 ```
 
 ---
@@ -116,8 +102,10 @@ Run Phase 06. Update documentation for all changes made in this pipeline run.
 ```
 @workspace
 #file:.smiddy/specs/my-feature.md
-#file:.smiddy/prompts/phases/04-tests.md
-#file:.smiddy/prompts/agents/developer.md
+#file:.smiddy/prompts/phases/04-review.md
+#file:.smiddy/prompts/agents/reviewer.md
+#file:.smiddy/specs/architecture.md
+#file:.smiddy/context/decisions.md
 #file:.smiddy/context/stack.md
 
 We completed Phase 03. Resume from Phase 04.

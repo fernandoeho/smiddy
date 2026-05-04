@@ -1,7 +1,7 @@
-# Phase 03 — Implementation
+# Phase 03 — Build
 
 **Input:** Approved spec at `specs/<feature-name>.md` (status: In Review or Approved).
-**Output:** Production code changes committed. No test files written in this phase.
+**Output:** Production code and tests committed. All tests passing.
 
 **Requires:**
 - `.smiddy/context/stack.md` — languages, frameworks, and tooling conventions
@@ -12,7 +12,7 @@
 
 You are operating as a **Developer**. Load the persona from `.smiddy/prompts/agents/developer.md` before proceeding.
 
-Your job is to write the production code that fulfills the spec. Tests come in Phase 04.
+Your job is to write the production code that fulfills the spec, and the tests that verify it. Both belong in this phase.
 
 ### Step 1 — Review inputs
 
@@ -53,14 +53,44 @@ Follow these rules:
 - Handle only errors that can actually occur given the calling context.
 - Do not add fallbacks for scenarios that are impossible by construction.
 
-### Step 4 — Self-review before handing off
+### Step 4 — Write tests
+
+For each acceptance criterion in the spec, write at least one test that verifies the observable behavior.
+
+**Test type selection**
+
+| Test type | Use when |
+|---|---|
+| Unit | Testing a single function or class in isolation |
+| Integration | Testing the interaction between two or more components |
+| End-to-end | Testing a complete user-facing flow |
+
+Prefer the lowest-cost test type that gives meaningful coverage. Do not write end-to-end tests for logic that can be covered by units.
+
+**Test rules**
+
+- Each test verifies one thing. One assertion per test where practical.
+- Test names describe what is being tested and what outcome is expected.
+- Do not test implementation details — test observable behavior.
+- Unit tests must not depend on real external services, databases, or filesystems.
+- Use fakes or in-memory implementations over mocks where possible.
+- Cover the happy path, each distinct error case in the acceptance criteria, and boundary conditions.
+- Do not duplicate setup across tests — use fixtures or helpers.
+
+If a criterion cannot be tested automatically, document why and describe the manual verification procedure.
+
+### Step 5 — Run the full suite
+
+Run the project's test suite. All tests — not just new ones — must pass before this phase is complete. A regression in an existing test is a blocker.
+
+### Step 6 — Self-review before handing off
 
 Before declaring this phase complete:
-- Re-read each acceptance criterion and confirm the implementation satisfies it
+- Re-read each acceptance criterion and confirm both the implementation and a test satisfy it
 - Check for any security issues introduced
 - Ensure no out-of-scope files were modified (if they were, document why)
 
-### Step 5 — Document out-of-scope findings
+### Step 7 — Document out-of-scope findings
 
 If you discovered adjacent issues while implementing, record them in the spec's "Out-of-Scope Changes Discovered" section. Do not fix them here.
 
@@ -68,9 +98,12 @@ If you discovered adjacent issues while implementing, record them in the spec's 
 
 ## Definition of Done for This Phase
 
-- [ ] All acceptance criteria are satisfiable by the written code
-- [ ] No test files written (deferred to Phase 04)
+- [ ] All acceptance criteria satisfied by the implementation
+- [ ] Every acceptance criterion has at least one automated test
+- [ ] All tests pass (new and existing)
 - [ ] No speculative features added beyond spec scope
 - [ ] No new security vulnerabilities introduced
+- [ ] Test names clearly describe the scenario and expected outcome
+- [ ] Any untestable criteria have documented manual procedures
 - [ ] Out-of-scope findings recorded in spec
 - [ ] Code follows existing conventions in the codebase

@@ -2,7 +2,7 @@
 
 <!-- Fill this in before running any pipeline phase. The AI agent reads this file to
 understand what the product is, who it serves, and what constitutes a valid feature.
-It is used to evaluate scope during Phase 01 (Requirements) and Phase 05 (Review). -->
+It is used to evaluate scope during Phase 01 (Requirements) and Phase 04 (Review). -->
 
 ---
 
