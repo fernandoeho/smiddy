@@ -9,6 +9,14 @@
 
 ---
 
+## Gate Check
+
+Before writing any documentation, run the gate at `.smiddy/governance/gates/review-to-docs.md` against the active spec and the Phase 04 review report.
+
+If the gate fails, stop immediately. If the approval decision was `Changes required`, route back to Phase 03. Report each failing item to the user and do not proceed until they are resolved.
+
+---
+
 ## Instructions
 
 Your job is to produce documentation that makes the shipped feature understandable and maintainable. Write for the next developer, not for the current one.

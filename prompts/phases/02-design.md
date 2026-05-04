@@ -1,13 +1,21 @@
 # Phase 02 — Design
 
 **Input:** Approved spec file at `.smiddy/specs/<yyyy-mm-dd>-<feature-name>/<yyyy-mm-dd>-<feature-name>.md` (status: Draft or In Review).
-**Output:** Completed design sections in the spec, plus any new ADR files in `decisions/` and updated `decisions/index.yml`.
+**Output:** Completed design sections in the spec, plus any new ADR files in `.smiddy/governance/decisions/` and updated `.smiddy/governance/decisions/index.yml`.
 
 **Requires:**
 - `.smiddy/context/architecture.md` — existing system shape
 - `.smiddy/context/stack.md` — allowed tech stack
 - `.smiddy/governance/decisions/index.yml` — index of standing architectural decisions
 - `.smiddy/governance/standards/index.yml` — project coding standards (if populated)
+
+---
+
+## Gate Check
+
+Before doing any design work, run the gate at `.smiddy/governance/gates/requirements-to-design.md` against the active spec.
+
+If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
 
 ---
 

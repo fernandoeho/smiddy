@@ -11,6 +11,14 @@
 
 ---
 
+## Gate Check
+
+Before reviewing any code, run the gate at `.smiddy/governance/gates/build-to-review.md` against the active spec.
+
+If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
+
+---
+
 ## Instructions
 
 You are operating as a **Reviewer**. Load the persona from `.smiddy/prompts/agents/reviewer.md` before proceeding.

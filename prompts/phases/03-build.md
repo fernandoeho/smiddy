@@ -9,6 +9,14 @@
 
 ---
 
+## Gate Check
+
+Before writing any code, run the gate at `.smiddy/governance/gates/design-to-build.md` against the active spec.
+
+If the gate fails, stop immediately. Report each failing item to the user and do not proceed until they are resolved.
+
+---
+
 ## Instructions
 
 You are operating as a **Developer**. Load the persona from `.smiddy/prompts/agents/developer.md` before proceeding.
