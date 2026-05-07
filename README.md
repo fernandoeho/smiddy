@@ -78,6 +78,29 @@ The `.smiddy/governance/` folder holds all control and oversight artifacts:
 
 ---
 
+## Token Usage Baseline
+
+Smiddy includes an optional Python utility to estimate the token footprint of Smiddy-controlled artifacts.
+
+Run:
+
+```bash
+python .smiddy/tools/token_report.py
+```
+
+This generates:
+```
+.smiddy/reports/token-usage.md
+.smiddy/reports/token-usage.json
+```
+
+The report groups estimated token usage by context, governance, prompts, specs, docs, and other Smiddy artifacts.
+
+This is useful before implementing compression or context optimization.
+
+> **Note:** This is estimated usage, not exact provider billing.
+---
+
 ## Contributing
 
 Prompts live in `.smiddy/prompts/`. Keep them tool-agnostic — no tool-specific syntax. Tool-specific invocation guides belong in `.smiddy/docs/`; adapter behavior files belong in `.claude/CLAUDE.md` or `.copilot/instructions.md`.

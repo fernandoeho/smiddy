@@ -91,7 +91,7 @@ echo "Installing Smiddy into: $TARGET_DIR"
 echo
 
 echo "── Pipeline files ───────────────────────────────────────────"
-for dir in context specs prompts docs governance; do
+for dir in context specs prompts docs governance tools; do
   copy_dir "$dir" "$TARGET_DIR/.smiddy"
 done
 
